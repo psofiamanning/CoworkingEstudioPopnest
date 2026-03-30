@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-heading: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Epilogue', ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: #b73d37;
+  --color-secondary: #c76661;
+  --color-tertiary: #d48d88;
+  --color-quaternary: #e5b3b0;
+  --color-body: #374151;
+  --color-grey-placeholder: #b5aeae;
+  --color-neutral: #ded5d5;
+  --color-surface-dark: #2c333d;
+}
+
+@layer base {
+  body {
+    @apply font-body text-body antialiased;
+  }
+}

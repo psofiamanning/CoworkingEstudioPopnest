@@ -1,0 +1,5 @@
+# Ajusta la URL del Sitemap si el sitio se publica en otro dominio.
+User-agent: *
+Allow: /
+
+Sitemap: https://estudiopopnest.com/sitemap.xml
