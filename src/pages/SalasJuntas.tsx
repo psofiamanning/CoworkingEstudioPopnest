@@ -201,14 +201,18 @@ export function SalasJuntas() {
         </div>
       </section>
 
-      <section className="overflow-hidden">
-        <img
-          src={bottomImg}
-          alt=""
-          className="h-56 w-full object-cover md:h-80"
-          width={1920}
-          height={500}
-        />
+      <section className="border-t border-neutral/60 bg-[#fafafa] px-6 py-12 lg:px-12">
+        <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-neutral/40 bg-white shadow-sm ring-1 ring-black/[0.03]">
+          <img
+            src={bottomImg}
+            alt="Cafetería y área de café en Estudio Popnest"
+            className="h-52 w-full object-cover object-center md:h-64 lg:h-72"
+            width={1024}
+            height={768}
+            sizes="(max-width: 1024px) 100vw, 1024px"
+            decoding="async"
+          />
+        </div>
       </section>
     </main>
   )
