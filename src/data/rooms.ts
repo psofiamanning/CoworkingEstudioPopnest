@@ -30,7 +30,8 @@ export const rooms: Room[] = [
     capacityLabel: '8 asientos',
     image: '/images/home/reunion-sala-azul.png',
     status: 'bookable',
-    reservationUrl: 'https://example.com/reservar/bohemios',
+    reservationUrl:
+      'https://archieapp.co/estudio-popnest-1/public/book-a-room/f0c4e0dd-f679-5056-8e85-bffe060fb2e9?filters=U2FsdGVkX1%252FqQMt2sv5GZ7DE2McSNzK9KgNBoUnDYqE%253D',
   },
   {
     id: 'dakota',
@@ -42,7 +43,8 @@ export const rooms: Room[] = [
     imageWidth: 576,
     imageHeight: 1024,
     status: 'bookable',
-    reservationUrl: 'https://example.com/reservar/dakota',
+    reservationUrl:
+      'https://archieapp.co/estudio-popnest-1/public/book-a-room/3a737e8d-7214-5df9-8981-7462941fbd1a?filters=U2FsdGVkX1%252BTum1tgnkau8CUKJda2ppZ3AkK9HqUi8Y%253D',
   },
   {
     id: 'coyote',
