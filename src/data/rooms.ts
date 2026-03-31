@@ -44,7 +44,7 @@ export const rooms: Room[] = [
     imageHeight: 1024,
     status: 'bookable',
     reservationUrl:
-      'https://archieapp.co/estudio-popnest-1/public/book-a-room/3a737e8d-7214-5df9-8981-7462941fbd1a?filters=U2FsdGVkX1%252BTum1tgnkau8CUKJda2ppZ3AkK9HqUi8Y%253D',
+      'https://archieapp.co/estudio-popnest-1/public/book-a-room/3a737e8d-7214-5df9-8981-7462941fbd1a?filters=U2FsdGVkX19fNfip8Cc6qXlYEcwJXI8DEHKERrKKOz4%253D',
   },
   {
     id: 'carmelo',
@@ -63,7 +63,8 @@ export const rooms: Room[] = [
     capacityLabel: 'Hasta 50 personas',
     image: '/images/espacios/sala-coyote.png',
     status: 'bookable',
-    reservationUrl: 'https://example.com/reservar/coyote',
+    reservationUrl:
+      'https://archieapp.co/estudio-popnest-1/public/book-a-room/b86d76bf-8f2d-563d-a704-bed3cde62080?filters=U2FsdGVkX18bGPlKMUyv4a1V4pRDothjhNFJh4%252B0liI%253D',
   },
   {
     id: 'sacramento',
