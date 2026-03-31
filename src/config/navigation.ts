@@ -7,6 +7,8 @@ export type NavItem =
 export const mainNav: NavItem[] = [
   { label: 'Planes', to: '/planes' },
   { label: 'Salas de juntas', to: '/salas-de-juntas' },
+  { label: 'Eventos', to: '/eventos' },
+  { label: 'Oficinas', to: '/oficinas-largo-plazo' },
   { label: 'Wellness', href: site.wellnessUrl, external: true },
   { label: 'Contacto', to: '/contacto' },
 ]

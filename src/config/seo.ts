@@ -41,6 +41,16 @@ export const routeSeo: Record<string, RouteSeo> = {
     description:
       'Salas de reuniones por hora en Coyoacán, colonia Del Carmen: distintas capacidades para equipos, espacios equipados y ubicación céntrica cerca del centro histórico del barrio.',
   },
+  '/oficinas-largo-plazo': {
+    title: 'Renta de oficinas a largo plazo y anual en Coyoacán | Estudio Popnest',
+    description:
+      'Oficinas privadas en renta en Del Carmen, Coyoacán: contratos anuales o largo plazo, acceso a áreas comunes y cafetería. Cotización por WhatsApp o visita.',
+  },
+  '/eventos': {
+    title: 'Eventos, talleres y workshops en Coyoacán | Estudio Popnest',
+    description:
+      'Renta de espacio en Del Carmen para talleres, workshops y encuentros. Formulario de solicitud con fecha, aforo, equipamiento y catering. Respuesta por WhatsApp.',
+  },
   '/contacto': {
     title: 'Contacto y ubicación en Del Carmen, Coyoacán | Estudio Popnest',
     description:

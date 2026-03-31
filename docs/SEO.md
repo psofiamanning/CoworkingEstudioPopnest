@@ -18,7 +18,7 @@ Documento de seguimiento: lo implementado en el código y líneas de trabajo pen
 
 ### Títulos y descripciones por ruta (`src/config/seo.ts`)
 
-- Definidos para: `/`, `/planes`, `/salas-de-juntas`, `/contacto`, `/sobre-nosotros`, `/privacidad`, `/terminos`, `/404`.
+- Definidos para: `/`, `/planes`, `/salas-de-juntas`, `/oficinas-largo-plazo`, `/eventos`, `/contacto`, `/sobre-nosotros`, `/privacidad`, `/terminos`, `/404`.
 - Enfoque **local** (Del Carmen, Coyoacán, Ciudad de México / CDMX) y tipo de servicio (coworking, salas, membresías) sin relleno artificial de palabras clave.
 
 ### HTML estático inicial (`index.html`)

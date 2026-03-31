@@ -4,6 +4,8 @@ import { MainLayout } from './layouts/MainLayout'
 import { Home } from './pages/Home'
 import { Planes } from './pages/Planes'
 import { SalasJuntas } from './pages/SalasJuntas'
+import { OficinasLargoPlazo } from './pages/OficinasLargoPlazo'
+import { Eventos } from './pages/Eventos'
 import { Contacto } from './pages/Contacto'
 import { SobreNosotros } from './pages/SobreNosotros'
 import { Terminos } from './pages/Terminos'
@@ -19,6 +21,8 @@ function App() {
           <Route index element={<Home />} />
           <Route path="planes" element={<Planes />} />
           <Route path="salas-de-juntas" element={<SalasJuntas />} />
+          <Route path="oficinas-largo-plazo" element={<OficinasLargoPlazo />} />
+          <Route path="eventos" element={<Eventos />} />
           <Route path="contacto" element={<Contacto />} />
           <Route path="sobre-nosotros" element={<SobreNosotros />} />
           <Route path="terminos" element={<Terminos />} />

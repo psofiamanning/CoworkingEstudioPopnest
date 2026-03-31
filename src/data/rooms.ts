@@ -47,6 +47,16 @@ export const rooms: Room[] = [
       'https://archieapp.co/estudio-popnest-1/public/book-a-room/3a737e8d-7214-5df9-8981-7462941fbd1a?filters=U2FsdGVkX1%252BTum1tgnkau8CUKJda2ppZ3AkK9HqUi8Y%253D',
   },
   {
+    id: 'carmelo',
+    name: 'Carmelo',
+    priceLabel: 'Desde $300 MXN por hora',
+    capacityLabel: '4 asientos',
+    image: '/images/espacios/sala-azul-mural-tv.png',
+    status: 'bookable',
+    // TODO: reemplazar por enlace real de reserva (Archie) para Carmelo.
+    reservationUrl: 'https://example.com/reservar/carmelo',
+  },
+  {
     id: 'coyote',
     name: 'Coyote',
     priceLabel: 'Desde $400 MXN por hora',
@@ -54,14 +64,6 @@ export const rooms: Room[] = [
     image: '/images/espacios/sala-coyote.png',
     status: 'bookable',
     reservationUrl: 'https://example.com/reservar/coyote',
-  },
-  {
-    id: 'carmelo',
-    name: 'Carmelo',
-    priceLabel: 'Desde $400 MXN por hora',
-    capacityLabel: '8 asientos',
-    image: '/images/espacios/sala-azul-mural-tv.png',
-    status: 'construction',
   },
   {
     id: 'sacramento',
