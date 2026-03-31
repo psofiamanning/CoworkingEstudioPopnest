@@ -7,12 +7,12 @@ export function SiteFooter() {
   const mailtoHref = `mailto:${site.businessEmail}`
 
   return (
-    <footer className="bg-primary py-16 text-white">
+    <footer className="relative overflow-hidden bg-gradient-to-r from-[#b73d37] to-[#c76661] py-16 text-white">
       <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-12">
         <div>
           <Link
             to="/"
-            className="inline-flex rounded-lg bg-white p-2 shadow-sm"
+            className="inline-flex rounded-2xl bg-white/95 p-2.5 shadow-sm ring-1 ring-white/20"
             aria-label="Estudio Popnest — inicio"
           >
             <img

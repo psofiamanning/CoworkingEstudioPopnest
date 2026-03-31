@@ -32,7 +32,7 @@ function NavItemView({ item }: { item: NavItem }) {
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 border-b border-neutral/80 bg-white">
+    <header className="sticky top-0 z-50 border-b border-neutral/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/70 shadow-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-12">
         <Link
           to="/"

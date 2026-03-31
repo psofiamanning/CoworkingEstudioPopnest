@@ -83,7 +83,7 @@ export function Eventos() {
   )}&body=${encodeURIComponent(buildEventoWhatsAppMessage(form))}`
 
   return (
-    <main className="bg-white pb-20">
+    <main className="bg-[#fbfbfc] pb-20">
       <section className="relative flex min-h-[min(48vh,400px)] items-center justify-center overflow-hidden">
         <img
           src={heroImg}

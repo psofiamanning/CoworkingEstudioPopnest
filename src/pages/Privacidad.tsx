@@ -1,6 +1,6 @@
 export function Privacidad() {
   return (
-    <main className="bg-white pb-20">
+    <main className="bg-[#fbfbfc] pb-20">
       <div className="mx-auto max-w-3xl px-6 py-16 lg:px-12">
         <h1 className="font-heading text-[30px] font-bold leading-[1.4] text-[#1f2937] md:text-4xl">
           Aviso de privacidad

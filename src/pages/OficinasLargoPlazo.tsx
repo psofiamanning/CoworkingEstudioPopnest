@@ -11,7 +11,7 @@ export function OficinasLargoPlazo() {
   )
 
   return (
-    <main className="bg-white pb-0">
+    <main className="bg-[#fbfbfc] pb-0">
       <section className="relative flex min-h-[min(50vh,420px)] items-center justify-center overflow-hidden">
         <img
           src={heroImg}

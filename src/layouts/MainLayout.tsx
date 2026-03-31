@@ -9,7 +9,9 @@ import { WhatsAppFloat } from '../components/WhatsAppFloat'
 export function MainLayout() {
   return (
     <CookieConsentProvider>
-      <div className="min-h-screen bg-white">
+      <div
+        className="min-h-screen bg-[#fbfbfc] bg-[radial-gradient(ellipse_at_top,_rgba(183,61,55,0.10),_transparent_55%)] bg-no-repeat"
+      >
         <SeoHead />
         <JsonLdLocalBusiness />
         <SiteHeader />
