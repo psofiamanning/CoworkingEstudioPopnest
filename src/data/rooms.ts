@@ -53,8 +53,8 @@ export const rooms: Room[] = [
     capacityLabel: '4 asientos',
     image: '/images/espacios/sala-azul-mural-tv.png',
     status: 'bookable',
-    // TODO: reemplazar por enlace real de reserva (Archie) para Carmelo.
-    reservationUrl: 'https://example.com/reservar/carmelo',
+    reservationUrl:
+      'https://archieapp.co/estudio-popnest-1/public/book-a-room/2621a59c-b78b-554a-9f0d-261dc1e76a66?filters=U2FsdGVkX1%252Fm8mBzBvKMneEUvuPEYOGUMvKIkteXPVE%253D',
   },
   {
     id: 'coyote',
