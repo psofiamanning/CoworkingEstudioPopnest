@@ -10,7 +10,7 @@ export const contactFaq: readonly FaqItem[] = [
   {
     question: '¿Dónde está Estudio Popnest?',
     answer:
-      'En Londres 105, Colonia Del Carmen, Coyoacán, Ciudad de México (CP 04100), a pasos del Museo Frida Kahlo. Puedes abrir la ubicación en Google Maps desde el pie de página de este sitio o escribirnos por WhatsApp.',
+      'En Londres 105, Colonia Del Carmen, Coyoacán, Ciudad de México (CP 04100), a pasos del Museo Frida Kahlo. En esta página tienes el mapa y la sección «Ubicación y cómo llegar»; también puedes abrir Google Maps desde el pie de página o escribirnos por WhatsApp.',
   },
   {
     question: '¿Cuál es el horario?',

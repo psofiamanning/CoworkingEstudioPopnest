@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom'
+import { CookieConsentProvider } from '../components/CookieConsent'
 import { JsonLdLocalBusiness } from '../components/seo/JsonLdLocalBusiness'
 import { SeoHead } from '../components/seo/SeoHead'
 import { SiteHeader } from '../components/layout/SiteHeader'
@@ -7,13 +8,15 @@ import { WhatsAppFloat } from '../components/WhatsAppFloat'
 
 export function MainLayout() {
   return (
-    <div className="min-h-screen bg-white">
-      <SeoHead />
-      <JsonLdLocalBusiness />
-      <SiteHeader />
-      <Outlet />
-      <SiteFooter />
-      <WhatsAppFloat />
-    </div>
+    <CookieConsentProvider>
+      <div className="min-h-screen bg-white">
+        <SeoHead />
+        <JsonLdLocalBusiness />
+        <SiteHeader />
+        <Outlet />
+        <SiteFooter />
+        <WhatsAppFloat />
+      </div>
+    </CookieConsentProvider>
   )
 }

@@ -8,7 +8,7 @@ export const business = {
   name: 'Estudio Popnest',
   legalName: 'Estudio Popnest',
   description:
-    'Coworking y salas de reuniones en Coyoacán, CDMX, cerca del Museo Frida Kahlo. Membresías, pase por día, Wi‑Fi, café y terraza.',
+    'Coworking y salas de juntas en la colonia Del Carmen, Coyoacán (Ciudad de México): membresías, pase por día, Wi‑Fi, café y terraza, cerca del Museo Frida Kahlo.',
   streetAddress: 'Londres 105',
   addressLocality: 'Coyoacán',
   addressRegion: 'Ciudad de México',
@@ -27,41 +27,43 @@ export type RouteSeo = { title: string; description: string; noIndex?: boolean }
 /** Meta por ruta (pathname con react-router, sin dominio) */
 export const routeSeo: Record<string, RouteSeo> = {
   '/': {
-    title: 'Estudio Popnest | Coworking y salas de reuniones en Coyoacán, CDMX',
+    title: 'Estudio Popnest | Coworking y salas de juntas en Del Carmen, Coyoacán',
     description:
-      'Coworking en Coyoacán, a pasos del Museo Frida Kahlo: salas de juntas, pase por día, membresías, Wi‑Fi, café, terraza y ambiente profesional. Londres 105, Del Carmen.',
+      'Coworking en la colonia Del Carmen (Coyoacán, Ciudad de México): salas de reuniones por hora, pase por día y membresías, con Wi‑Fi, café y terraza. A pasos del Museo Frida Kahlo, Londres 105.',
   },
   '/planes': {
-    title: 'Planes y membresías | Estudio Popnest Coyoacán',
+    title: 'Membresías y pase por día en Coyoacán | Estudio Popnest',
     description:
-      'Pase por día, plan mensual y paquetes de 5 y 10 días en Estudio Popnest. Elige tu acceso al coworking en Coyoacán, CDMX.',
+      'Planes para usar nuestro coworking en Del Carmen, Coyoacán (CDMX): pase por día, mensual y paquetes de varios días. Elige el acceso que encaje con tu forma de trabajar.',
   },
   '/salas-de-juntas': {
-    title: 'Salas de juntas y eventos en Coyoacán | Estudio Popnest',
+    title: 'Salas de juntas en Del Carmen, Coyoacán | Estudio Popnest',
     description:
-      'Reserva salas de reuniones en Coyoacán: capacidades desde 4 hasta 70 personas. Espacios equipados cerca del centro de Coyoacán.',
+      'Salas de reuniones por hora en Coyoacán, colonia Del Carmen: distintas capacidades para equipos, espacios equipados y ubicación céntrica cerca del centro histórico del barrio.',
   },
   '/contacto': {
-    title: 'Contacto | Estudio Popnest — Coyoacán, CDMX',
+    title: 'Contacto y ubicación en Del Carmen, Coyoacán | Estudio Popnest',
     description:
-      'WhatsApp, correo, dirección en Londres 105 (Del Carmen, Coyoacán), horario y preguntas frecuentes: ubicación, reservas y estacionamiento.',
+      'Teléfono, correo y dirección en Londres 105 (Del Carmen, Coyoacán, CDMX): mapa, cómo llegar, transporte público y orientación para estacionamiento. Horario y preguntas frecuentes.',
   },
   '/sobre-nosotros': {
-    title: 'Sobre nosotros | Estudio Popnest',
+    title: 'Sobre Estudio Popnest | Coworking en Del Carmen, Coyoacán',
     description:
-      'Conoce Estudio Popnest: comunidad de trabajo en Coyoacán, tercer lugar entre hogar y oficina, diseño y creatividad.',
+      'Quiénes somos: comunidad de trabajo en la colonia Del Carmen, Coyoacán — un tercer lugar entre casa y oficina para profesionistas y equipos, con foco en diseño y creatividad.',
   },
   '/privacidad': {
-    title: 'Aviso de privacidad | Estudio Popnest',
-    description: 'Aviso de privacidad y tratamiento de datos personales de Estudio Popnest.',
+    title: 'Aviso de privacidad | Estudio Popnest, Coyoacán',
+    description:
+      'Aviso de privacidad de Estudio Popnest (espacio de coworking en Coyoacán, Ciudad de México): tratamiento de datos personales conforme a la legislación aplicable.',
   },
   '/terminos': {
-    title: 'Términos y condiciones | Estudio Popnest',
-    description: 'Términos y condiciones de uso de los servicios de Estudio Popnest.',
+    title: 'Términos y condiciones | Estudio Popnest, Coyoacán',
+    description:
+      'Condiciones de uso de los servicios de coworking y salas de reunión de Estudio Popnest en Del Carmen, Coyoacán (CDMX).',
   },
   '/404': {
     title: 'Página no encontrada | Estudio Popnest',
-    description: 'La página que buscas no existe o fue movida.',
+    description: 'La página que buscas no existe o fue movida. Vuelve al inicio o revisa la URL.',
     noIndex: true,
   },
 }

@@ -56,8 +56,8 @@ export const rooms: Room[] = [
     reservationUrl: 'https://example.com/reservar/coyote',
   },
   {
-    id: 'colibri',
-    name: 'Colibrí',
+    id: 'carmelo',
+    name: 'Carmelo',
     priceLabel: 'Desde $400 MXN por hora',
     capacityLabel: '8 asientos',
     image: '/images/espacios/sala-azul-mural-tv.png',

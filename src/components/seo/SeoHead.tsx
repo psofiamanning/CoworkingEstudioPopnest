@@ -49,7 +49,7 @@ export function SeoHead() {
     setMeta('property', 'og:description', seo.description)
     setMeta('property', 'og:url', canonical)
     setMeta('property', 'og:image', ogImage)
-    setMeta('property', 'og:image:alt', `${business.name} — coworking en Coyoacán`)
+    setMeta('property', 'og:image:alt', `${business.name} — coworking en Del Carmen, Coyoacán`)
 
     setMeta('name', 'twitter:card', 'summary_large_image')
     setMeta('name', 'twitter:title', seo.title)
