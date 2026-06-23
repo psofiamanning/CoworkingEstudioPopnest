@@ -47,16 +47,6 @@ export const rooms: Room[] = [
       'https://archieapp.co/estudio-popnest-1/public/book-a-room/3a737e8d-7214-5df9-8981-7462941fbd1a?filters=U2FsdGVkX19fNfip8Cc6qXlYEcwJXI8DEHKERrKKOz4%253D',
   },
   {
-    id: 'carmelo',
-    name: 'Carmelo',
-    priceLabel: 'Desde $300 MXN por hora',
-    capacityLabel: '4 asientos',
-    image: '/images/espacios/sala-azul-mural-tv.png',
-    status: 'bookable',
-    reservationUrl:
-      'https://archieapp.co/estudio-popnest-1/public/book-a-room/2621a59c-b78b-554a-9f0d-261dc1e76a66?filters=U2FsdGVkX1%252Fm8mBzBvKMneEUvuPEYOGUMvKIkteXPVE%253D',
-  },
-  {
     id: 'coyote',
     name: 'Coyote',
     priceLabel: 'Desde $400 MXN por hora',
@@ -65,6 +55,27 @@ export const rooms: Room[] = [
     status: 'bookable',
     reservationUrl:
       'https://archieapp.co/estudio-popnest-1/public/book-a-room/b86d76bf-8f2d-563d-a704-bed3cde62080?filters=U2FsdGVkX18bGPlKMUyv4a1V4pRDothjhNFJh4%252B0liI%253D',
+  },
+  {
+    id: 'colibri',
+    name: 'Colibrí',
+    priceLabel: 'Desde $300 MXN por hora',
+    capacityLabel: '4 asientos',
+    image: '/images/espacios/sala-colibri.jpg',
+    imageFit: 'contain',
+    imageWidth: 900,
+    imageHeight: 1600,
+    status: 'bookable',
+    reservationUrl:
+      'https://archieapp.co/estudio-popnest-1/public/book-a-room/2d7762d7-6b0c-54fb-bfde-558333adc8a3?filters=U2FsdGVkX18PNNEBQCr639awoshnmR19rCHthGT%252Buac%253D',
+  },
+  {
+    id: 'carmelo',
+    name: 'Carmelo',
+    priceLabel: 'Desde $300 MXN por hora',
+    capacityLabel: '4 asientos',
+    image: '/images/espacios/sala-azul-mural-tv.png',
+    status: 'unavailable_office',
   },
   {
     id: 'sacramento',
