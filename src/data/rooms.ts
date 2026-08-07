@@ -22,6 +22,20 @@ export type Room = {
   reservationUrl?: string
 }
 
+/**
+ * Amenidades incluidas en la renta de sala de juntas por hora.
+ * Las oficinas por día y medio día (ver `officeDayRentals`) comparten esta lista.
+ */
+export const hourlyRoomAmenities: string[] = [
+  'Wi‑Fi de alta velocidad.',
+  'Pantalla para presentaciones (sujeto a disponibilidad).',
+  'Uso de impresora (sujeto a disponibilidad).',
+  'Café, té y agua siempre disponibles.',
+  'Acceso a cocina, refrigerador y áreas comunes.',
+  'Atención en recepción.',
+  'Espacio pet-friendly 🐾',
+]
+
 export const rooms: Room[] = [
   {
     id: 'bohemios',

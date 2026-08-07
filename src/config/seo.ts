@@ -42,9 +42,9 @@ export const routeSeo: Record<string, RouteSeo> = {
       'Salas de reuniones por hora en Coyoacán, colonia Del Carmen: distintas capacidades para equipos, espacios equipados y ubicación céntrica cerca del centro histórico del barrio.',
   },
   '/oficinas-largo-plazo': {
-    title: 'Renta de oficinas a largo plazo y anual en Coyoacán | Estudio Popnest',
+    title: 'Renta de oficina privada por día, medio día y largo plazo en Coyoacán | Estudio Popnest',
     description:
-      'Oficinas privadas en renta en Del Carmen, Coyoacán: contratos anuales o largo plazo, acceso a áreas comunes y cafetería. Cotización por WhatsApp o visita.',
+      'Oficinas privadas en renta en Del Carmen, Coyoacán: por día ($1,200) o medio día ($600) con reserva en línea, y contratos anuales o de largo plazo con cotización por WhatsApp.',
   },
   '/eventos': {
     title: 'Eventos, talleres y workshops en Coyoacán | Estudio Popnest',
