@@ -2,6 +2,8 @@ import { useCallback, useState, type FormEvent } from 'react'
 import { Link } from 'react-router-dom'
 import { business } from '../config/seo'
 import { site } from '../config/site'
+import { RoomCard } from '../components/RoomCard'
+import { coyoteEventRoom } from '../data/rooms'
 import {
   DISPOSICION_OPCIONES,
   EQUIPAMIENTO_ITEMS,
@@ -101,6 +103,10 @@ export function Eventos() {
           </p>
         </div>
       </section>
+
+      <div className="mx-auto max-w-2xl px-6 pt-12 lg:px-12">
+        <RoomCard room={coyoteEventRoom} />
+      </div>
 
       <div className="mx-auto max-w-3xl px-6 pt-12 lg:px-12">
         <p className="font-body leading-relaxed text-body">

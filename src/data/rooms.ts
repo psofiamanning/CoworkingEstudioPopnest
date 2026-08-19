@@ -38,16 +38,6 @@ export const hourlyRoomAmenities: string[] = [
 
 export const rooms: Room[] = [
   {
-    id: 'bohemios',
-    name: 'Bohemios',
-    priceLabel: 'Desde $400 MXN por hora',
-    capacityLabel: '8 asientos',
-    image: '/images/home/reunion-sala-azul.png',
-    status: 'bookable',
-    reservationUrl:
-      'https://archieapp.co/estudio-popnest-1/public/book-a-room/f0c4e0dd-f679-5056-8e85-bffe060fb2e9?filters=U2FsdGVkX1%252FqQMt2sv5GZ7DE2McSNzK9KgNBoUnDYqE%253D',
-  },
-  {
     id: 'dakota',
     name: 'Dakota',
     priceLabel: 'Desde $400 MXN por hora',
@@ -61,14 +51,12 @@ export const rooms: Room[] = [
       'https://archieapp.co/estudio-popnest-1/public/book-a-room/3a737e8d-7214-5df9-8981-7462941fbd1a?filters=U2FsdGVkX19fNfip8Cc6qXlYEcwJXI8DEHKERrKKOz4%253D',
   },
   {
-    id: 'coyote',
-    name: 'Coyote',
+    id: 'bohemios',
+    name: 'Bohemios',
     priceLabel: 'Desde $400 MXN por hora',
-    capacityLabel: 'Hasta 50 personas',
-    image: '/images/espacios/sala-coyote.png',
-    status: 'bookable',
-    reservationUrl:
-      'https://archieapp.co/estudio-popnest-1/public/book-a-room/b86d76bf-8f2d-563d-a704-bed3cde62080?filters=U2FsdGVkX18bGPlKMUyv4a1V4pRDothjhNFJh4%252B0liI%253D',
+    capacityLabel: '8 asientos',
+    image: '/images/home/reunion-sala-azul.png',
+    status: 'unavailable_office',
   },
   {
     id: 'colibri',
@@ -79,9 +67,7 @@ export const rooms: Room[] = [
     imageFit: 'contain',
     imageWidth: 900,
     imageHeight: 1600,
-    status: 'bookable',
-    reservationUrl:
-      'https://archieapp.co/estudio-popnest-1/public/book-a-room/2d7762d7-6b0c-54fb-bfde-558333adc8a3?filters=U2FsdGVkX18PNNEBQCr639awoshnmR19rCHthGT%252Buac%253D',
+    status: 'unavailable_office',
   },
   {
     id: 'carmelo',
@@ -116,3 +102,18 @@ export const rooms: Room[] = [
     status: 'unavailable_office',
   },
 ]
+
+/**
+ * Sala Coyote: se muestra en /eventos (salón grande para eventos y talleres),
+ * no en el listado de /salas-de-juntas.
+ */
+export const coyoteEventRoom: Room = {
+  id: 'coyote',
+  name: 'Coyote',
+  priceLabel: 'Desde $400 MXN por hora',
+  capacityLabel: 'Hasta 50 personas',
+  image: '/images/espacios/sala-coyote.png',
+  status: 'bookable',
+  reservationUrl:
+    'https://archieapp.co/estudio-popnest-1/public/book-a-room/b86d76bf-8f2d-563d-a704-bed3cde62080?filters=U2FsdGVkX18bGPlKMUyv4a1V4pRDothjhNFJh4%252B0liI%253D',
+}
