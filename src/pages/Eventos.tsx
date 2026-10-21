@@ -10,11 +10,11 @@ const photos = [
 ]
 
 // Datos tomados de popnest.app/renta-salon (config/salonPricing.js del proyecto Wellness).
-const datos = [
-  { titulo: 'Capacidad', valor: 'Hasta 20 personas' },
+const datos: { titulo: string; valor: string; nota?: string }[] = [
+  { titulo: 'Capacidad', valor: '20 personas', nota: 'Recomendada. Grupos mayores, sujetos a cotización.' },
   { titulo: 'Precio', valor: 'Desde $150 MXN / hora' },
   { titulo: 'Renta mínima', valor: '1 hora' },
-  { titulo: 'Reserva', valor: 'En línea, pago al instante' },
+  { titulo: 'Reserva', valor: 'En línea' },
 ]
 
 const horarios = [
@@ -46,7 +46,7 @@ export function Eventos() {
         <p className="mt-4 font-body text-base leading-relaxed text-body md:text-lg">
           Un salón amplio y luminoso en Del Carmen, Coyoacán, pensado para yoga, pilates, danza,
           clases privadas, talleres, sesiones de trabajo y celebraciones. Elige tu horario y
-          reserva en línea al instante.
+          reserva en línea.
         </p>
         <a href={rentaSalonUrl} className={`${buttonClass} mt-6`}>
           Renta el salón
@@ -58,6 +58,7 @@ export function Eventos() {
           <div key={d.titulo} className="rounded-xl border border-neutral/60 bg-white p-4 text-center shadow-sm">
             <dt className="font-body text-xs font-semibold uppercase tracking-wide text-[#6b7280]">{d.titulo}</dt>
             <dd className="mt-1 font-heading text-base font-bold text-[#1f2937] md:text-lg">{d.valor}</dd>
+            {d.nota ? <dd className="mt-1 font-body text-xs leading-snug text-[#6b7280]">{d.nota}</dd> : null}
           </div>
         ))}
       </dl>
