@@ -1,16 +1,16 @@
-const heroImg = '/images/espacios/sala-mural-sillas-blancas.png'
+const heroImg = '/images/espacios/salon-wellness-espejos.jpg'
 const rentaSalonUrl = 'https://popnest.app/renta-salon'
 
 export function Eventos() {
   return (
     <main className="flex flex-col items-center bg-[#fbfbfc] px-4 py-10 md:py-16">
-      <a href={rentaSalonUrl} className="block w-full max-w-[1024px]">
+      <a href={rentaSalonUrl} className="block w-full max-w-[1280px]">
         <img
           src={heroImg}
-          alt="Salón de eventos de Estudio Popnest"
+          alt="Salón wellness de Estudio Popnest"
           className="h-auto w-full rounded-xl shadow-sm"
-          width={1024}
-          height={768}
+          width={1280}
+          height={963}
         />
       </a>
       <a
