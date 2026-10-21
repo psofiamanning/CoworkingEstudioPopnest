@@ -1,12 +1,15 @@
 const rentaSalonUrl = 'https://popnest.app/renta-salon'
 
-/** Fotos del Salón Coyote; `position` ajusta el recorte para que no se corte lo importante. */
-const photos = [
-  { src: '/images/espacios/salon-wellness-espejos.jpg', alt: 'Salón Coyote con espejos e iluminación cálida', position: 'center' },
-  { src: '/images/espacios/coyote-grupo-pared.jpg', alt: 'Salón Coyote: pared de madera con iluminación cálida', position: 'center 70%' },
-  { src: '/images/espacios/coyote-yoga-espejos.jpg', alt: 'Salón Coyote: clase de yoga frente a los espejos', position: 'center 65%' },
-  { src: '/images/espacios/coyote-movimiento.jpg', alt: 'Salón Coyote: práctica en tapetes bajo la luz circular', position: 'center 60%' },
-  { src: '/images/espacios/coyote-muro-circulos.jpg', alt: 'Salón Coyote: muro de círculos en la entrada', position: 'center 80%' },
+/**
+ * Fotos del Salón Coyote. `crop` ajusta alto (en celular) y recorte para que no se corten
+ * las personas; las fotos verticales con gente completa necesitan más alto en celular.
+ */
+const photos: { src: string; alt: string; crop: string }[] = [
+  { src: '/images/espacios/salon-wellness-espejos.jpg', alt: 'Salón Coyote con espejos e iluminación cálida', crop: 'h-64 object-center' },
+  { src: '/images/espacios/coyote-grupo-pared.jpg', alt: 'Salón Coyote: pared de madera con iluminación cálida', crop: 'h-64 object-[center_70%]' },
+  { src: '/images/espacios/coyote-yoga-espejos.jpg', alt: 'Salón Coyote: clase de yoga frente a los espejos', crop: 'h-64 object-[center_65%]' },
+  { src: '/images/espacios/coyote-movimiento.jpg', alt: 'Salón Coyote: práctica en tapetes bajo la luz circular', crop: 'h-80 object-[center_68%] md:object-[center_60%]' },
+  { src: '/images/espacios/coyote-muro-circulos.jpg', alt: 'Salón Coyote: muro de círculos en la entrada', crop: 'h-80 object-[center_85%] md:object-[center_80%]' },
 ]
 
 // Datos tomados de popnest.app/renta-salon (config/salonPricing.js del proyecto Wellness).
@@ -36,7 +39,7 @@ const buttonClass =
   'inline-flex items-center justify-center rounded-md bg-primary px-8 py-3.5 font-body font-semibold text-white shadow-sm transition-colors hover:bg-secondary'
 
 // Dos fotos por vista: en celular una arriba de otra, en desktop lado a lado.
-const photoClass = 'h-64 w-full rounded-xl object-cover shadow-sm md:h-[380px]'
+const photoClass = 'w-full rounded-xl object-cover shadow-sm md:h-[380px]'
 
 export function Eventos() {
   return (
@@ -77,8 +80,7 @@ export function Eventos() {
             <img
               src={photo.src}
               alt={photo.alt}
-              className={photoClass}
-              style={{ objectPosition: photo.position }}
+              className={`${photoClass} ${photo.crop}`}
               loading={i < 2 ? 'eager' : 'lazy'}
             />
           </a>
