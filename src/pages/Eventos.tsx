@@ -11,8 +11,8 @@ const photos = [
 
 // Datos tomados de popnest.app/renta-salon (config/salonPricing.js del proyecto Wellness).
 const datos: { titulo: string; valor: string; nota?: string }[] = [
-  { titulo: 'Capacidad', valor: '20 personas', nota: 'Recomendada. Grupos mayores, sujetos a cotización.' },
-  { titulo: 'Precio', valor: 'Desde $150 MXN / hora' },
+  { titulo: 'Capacidad', valor: '20 personas', nota: 'Recomendada · grupos mayores bajo cotización' },
+  { titulo: 'Precio desde', valor: '$150 MXN / hora' },
   { titulo: 'Renta mínima', valor: '1 hora' },
   { titulo: 'Reserva', valor: 'En línea' },
 ]
@@ -53,12 +53,12 @@ export function Eventos() {
         </a>
       </div>
 
-      <dl className="mt-10 grid w-full max-w-5xl grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
+      <dl className="mt-8 grid w-full max-w-4xl grid-cols-2 gap-px overflow-hidden rounded-xl border border-neutral/60 bg-neutral/60 shadow-sm md:grid-cols-4">
         {datos.map((d) => (
-          <div key={d.titulo} className="rounded-xl border border-neutral/60 bg-white p-4 text-center shadow-sm">
-            <dt className="font-body text-xs font-semibold uppercase tracking-wide text-[#6b7280]">{d.titulo}</dt>
-            <dd className="mt-1 font-heading text-base font-bold text-[#1f2937] md:text-lg">{d.valor}</dd>
-            {d.nota ? <dd className="mt-1 font-body text-xs leading-snug text-[#6b7280]">{d.nota}</dd> : null}
+          <div key={d.titulo} className="flex flex-col justify-center bg-white px-3 py-3 text-center">
+            <dt className="font-body text-[11px] font-semibold uppercase tracking-wide text-[#6b7280]">{d.titulo}</dt>
+            <dd className="mt-0.5 font-heading text-sm font-bold text-[#1f2937] md:text-base">{d.valor}</dd>
+            {d.nota ? <dd className="font-body text-[11px] leading-snug text-[#6b7280]">{d.nota}</dd> : null}
           </div>
         ))}
       </dl>
