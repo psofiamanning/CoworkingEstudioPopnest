@@ -1,3 +1,6 @@
+import { site } from '../config/site'
+import { buildWhatsAppUrl } from '../lib/whatsapp'
+
 const rentaSalonUrl = 'https://popnest.app/renta-salon'
 
 /**
@@ -20,12 +23,10 @@ const datos: { titulo: string; valor: string; nota?: string }[] = [
   { titulo: 'Reserva', valor: 'En línea' },
 ]
 
-const horarios = [
-  { franja: 'Mañana', dias: 'Lunes a viernes', horas: '9:30 – 16:00' },
-  { franja: 'Tarde', dias: 'Lunes a viernes', horas: '16:00 – 19:00' },
-  { franja: 'Fin de semana', dias: 'Sábado y domingo', horas: '11:30 – 19:00' },
-  { franja: 'Noche', dias: 'Todos los días', horas: '19:00 – 21:30' },
-]
+const disponibilidadWhatsAppUrl = buildWhatsAppUrl(
+  site.whatsappPhoneDigits,
+  'Hola, me interesa rentar el Salón Coyote. ¿Me pueden compartir disponibilidad de fechas y horarios?',
+)
 
 const caracteristicas = [
   'Muros de espejo e iluminación cálida',
@@ -102,17 +103,19 @@ export function Eventos() {
           </ul>
         </section>
         <section className="rounded-xl border border-neutral/60 bg-white p-6 shadow-sm">
-          <h2 className="font-heading text-lg font-bold text-[#1f2937]">Horarios de renta</h2>
-          <ul className="mt-4 space-y-2 font-body text-sm text-body">
-            {horarios.map((h) => (
-              <li key={h.franja} className="flex justify-between gap-4">
-                <span>
-                  <strong className="font-semibold text-[#1f2937]">{h.franja}</strong> · {h.dias}
-                </span>
-                <span className="whitespace-nowrap">{h.horas}</span>
-              </li>
-            ))}
-          </ul>
+          <h2 className="font-heading text-lg font-bold text-[#1f2937]">Disponibilidad</h2>
+          <p className="mt-4 font-body text-sm leading-relaxed text-body">
+            Escríbenos por WhatsApp para consultar la disponibilidad de fechas y horarios. Con gusto
+            te ayudamos a encontrar el espacio ideal para tu actividad.
+          </p>
+          <a
+            href={disponibilidadWhatsAppUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-flex items-center justify-center rounded-md border border-primary px-6 py-2.5 font-body text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-white"
+          >
+            Consultar por WhatsApp
+          </a>
           <p className="mt-4 font-body text-xs leading-relaxed text-[#6b7280]">
             El precio depende del número de personas y del horario. Las horas rentadas incluyen tu
             montaje y recogida.
