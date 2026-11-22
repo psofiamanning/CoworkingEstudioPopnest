@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { espaciosGallery } from '../data/espaciosGallery'
 import { DualHero } from '../components/home/DualHero'
@@ -12,25 +11,6 @@ const img = {
 }
 
 export function Home() {
-  const [salaForm, setSalaForm] = useState({
-    nombre: '',
-    apellido: '',
-    email: '',
-    empresa: '',
-    dia: '',
-    hora: '',
-    personas: '',
-    info: '',
-  })
-  const [miembroForm, setMiembroForm] = useState({
-    nombre: '',
-    telefono: '',
-    email: '',
-    dia: '',
-    hora: '',
-    info: '',
-  })
-
   return (
     <>
       <DualHero />
@@ -96,58 +76,6 @@ export function Home() {
         </div>
       </section>
 
-      <section id="reservar-sala" className="bg-primary py-16 text-white">
-        <div className="mx-auto max-w-4xl px-6 lg:px-12">
-          <h2 className="text-center font-heading text-2xl font-bold md:text-3xl">
-            Reservar una Sala de Reuniones
-          </h2>
-          <form
-            className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2"
-            onSubmit={(e) => e.preventDefault()}
-          >
-            {(
-              [
-                ['nombre', 'Nombre'],
-                ['apellido', 'Apellido'],
-                ['email', 'Email'],
-                ['empresa', 'Empresa'],
-                ['dia', 'Día'],
-                ['hora', 'Hora'],
-                ['personas', 'Número de Personas'],
-              ] as const
-            ).map(([key, ph]) => (
-              <input
-                key={key}
-                type={key === 'email' ? 'email' : 'text'}
-                placeholder={ph}
-                value={salaForm[key]}
-                onChange={(e) =>
-                  setSalaForm((s) => ({ ...s, [key]: e.target.value }))
-                }
-                className="rounded-md border border-white/40 bg-white/15 px-4 py-3 font-body text-white placeholder:text-white/70 focus:border-white focus:outline-none focus:ring-1 focus:ring-white"
-              />
-            ))}
-            <textarea
-              placeholder="Información adicional"
-              rows={3}
-              value={salaForm.info}
-              onChange={(e) =>
-                setSalaForm((s) => ({ ...s, info: e.target.value }))
-              }
-              className="rounded-md border border-white/40 bg-white/15 px-4 py-3 font-body text-white placeholder:text-white/70 focus:border-white focus:outline-none focus:ring-1 focus:ring-white md:col-span-2"
-            />
-            <div className="md:col-span-2 flex justify-center pt-2">
-              <button
-                type="submit"
-                className="rounded-md bg-white px-10 py-3 font-body font-semibold text-primary transition-colors hover:bg-quaternary"
-              >
-                Enviar
-              </button>
-            </div>
-          </form>
-        </div>
-      </section>
-
       <section className="py-20">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2 lg:px-12">
           <div className="overflow-hidden rounded-[2rem]">
@@ -170,16 +98,10 @@ export function Home() {
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Link
                 to="/salas-de-juntas"
-                className="inline-flex justify-center rounded-md border-2 border-primary bg-white px-6 py-3 font-body font-semibold text-primary transition-colors hover:bg-quaternary/30"
-              >
-                Ir a Sala de Reuniones
-              </Link>
-              <a
-                href="#reservar-sala"
                 className="inline-flex justify-center rounded-md bg-primary px-6 py-3 font-body font-semibold text-white transition-colors hover:bg-secondary"
               >
-                Reservar Sala de Reuniones
-              </a>
+                Ver salas de reuniones
+              </Link>
             </div>
           </div>
         </div>
@@ -210,62 +132,6 @@ export function Home() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="border-b border-white/[0.07] bg-surface-dark pb-20 pt-16 text-white md:pb-24">
-        <div className="mx-auto max-w-4xl px-6 lg:px-12">
-          <h2 className="text-center font-heading text-2xl font-bold md:text-3xl">
-            Hazte Miembro
-          </h2>
-          <p className="mx-auto mt-4 max-w-xl text-center font-body text-white/85">
-            Agenda una visita para conocer el espacio y encontrar el plan ideal.
-          </p>
-          <form
-            className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2"
-            onSubmit={(e) => e.preventDefault()}
-          >
-            {(
-              [
-                ['nombre', 'Nombre'],
-                ['telefono', 'Teléfono'],
-                ['email', 'Email'],
-                ['dia', 'Día'],
-                ['hora', 'Hora'],
-              ] as const
-            ).map(([key, ph]) => (
-              <input
-                key={key}
-                type={key === 'email' ? 'email' : 'text'}
-                placeholder={ph}
-                value={miembroForm[key as keyof typeof miembroForm]}
-                onChange={(e) =>
-                  setMiembroForm((s) => ({
-                    ...s,
-                    [key]: e.target.value,
-                  }))
-                }
-                className="rounded-md border border-white/25 bg-white/10 px-4 py-3 font-body text-white placeholder:text-white/60 focus:border-white focus:outline-none focus:ring-1 focus:ring-white"
-              />
-            ))}
-            <textarea
-              placeholder="Información adicional"
-              rows={3}
-              value={miembroForm.info}
-              onChange={(e) =>
-                setMiembroForm((s) => ({ ...s, info: e.target.value }))
-              }
-              className="rounded-md border border-white/25 bg-white/10 px-4 py-3 font-body text-white placeholder:text-white/60 focus:border-white focus:outline-none focus:ring-1 focus:ring-white md:col-span-2"
-            />
-            <div className="md:col-span-2 flex justify-center pt-2">
-              <button
-                type="submit"
-                className="rounded-md bg-white px-10 py-3 font-body font-semibold text-surface-dark transition-colors hover:bg-quaternary"
-              >
-                Enviar
-              </button>
-            </div>
-          </form>
         </div>
       </section>
 
