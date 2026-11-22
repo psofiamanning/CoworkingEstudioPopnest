@@ -6,7 +6,6 @@ import { WellnessHome } from '../components/home/WellnessHome'
 /** Hero: `public/images/home/`. Galería: `espaciosGallery`. */
 const img = {
   hero: '/images/home/hero-sala.png',
-  mural: '/images/home/mural-circulos-3x3.png',
   reunion: '/images/home/reunion-sala-azul.png',
 }
 
@@ -30,46 +29,6 @@ export function Home() {
                 d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
               />
             </svg>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:items-start lg:px-12">
-          <div>
-            <h2 className="font-heading text-[30px] font-bold leading-[1.4] text-primary">
-              Membresías y Pases
-            </h2>
-            <ul className="mt-8 space-y-6 font-body text-body">
-              {[
-                'Acceso ilimitado mensual',
-                'Paquete de 10 días al mes',
-                'Paquete de 6 días al mes',
-                'Pase diario individual',
-              ].map((item) => (
-                <li
-                  key={item}
-                  className="flex flex-wrap items-baseline justify-between gap-2 border-b border-neutral pb-4"
-                >
-                  <span>{item}</span>
-                  <Link
-                    to="/planes"
-                    className="text-sm font-semibold text-primary hover:underline"
-                  >
-                    Ver más
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="overflow-hidden rounded-lg">
-            <img
-              src={img.mural}
-              alt="Mural con pájaros y círculos azules en Estudio Popnest"
-              className="h-full w-full object-cover"
-              width={800}
-              height={600}
-            />
           </div>
         </div>
       </section>
