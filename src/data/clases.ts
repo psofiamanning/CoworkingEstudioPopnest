@@ -171,7 +171,8 @@ export const classTypes: ClassType[] = [
     "duration": 60,
     "description": "Clase de danza árabe en Coyoacán que combina técnica, coordinación y expresión corporal. Fortalece el cuerpo, mejora la postura y reconecta con tu confianza. No necesitas experiencia previa.",
     "fullDescription": "La clase de Belly Dance es una práctica de danza árabe que combina técnica, coordinación y expresión corporal. A través de movimientos fluidos y dinámicos, fortalecerás el cuerpo, mejorarás tu postura y conectarás con tu confianza y feminidad.\n\nCada sesión integra calentamiento, trabajo de aislamientos y desplazamientos, y una secuencia final para disfrutar el movimiento. No necesitas experiencia previa: la práctica se adapta a todos los niveles.",
-    "image": "/images/clases/belly-dance.png"
+    "image": "/images/clases/belly-dance.png",
+    "photo": "/images/clases/belly-dance-clase.webp"
   },
   {
     "id": "stretching",
