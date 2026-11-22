@@ -105,6 +105,7 @@ export const classTypes: ClassType[] = [
     "description": "Práctica tradicional de Hatha Yoga en Coyoacán para equilibrar cuerpo y mente con posturas, respiración y atención consciente.",
     "fullDescription": "Hatha Yoga es una práctica clásica que integra posturas sostenidas, respiración consciente y pausas de atención para fortalecer el cuerpo y calmar la mente. El ritmo es claro y accesible, ideal para construir base técnica y presencia.\n\nPuedes esperar una secuencia progresiva con movilidad suave, trabajo de alineación, respiración guiada y cierre de relajación. Es una práctica equilibrada para cultivar estabilidad, flexibilidad y enfoque.",
     "image": "/images/clases/hatha-yoga.png",
+    "photo": "/images/clases/hatha-yoga-clase.webp",
     "whatToBring": [
       "tu propio mat de yoga"
     ]
