@@ -22,35 +22,56 @@ export function Clases() {
         ])}
       />
 
-      <section className="mx-auto max-w-5xl px-6 pb-8 pt-14 lg:px-12">
-        <h1 className="font-heading text-3xl font-bold text-ink md:text-4xl">
-          Clases de yoga, Pilates y bienestar en Coyoacán
-        </h1>
-        <p className="mt-4 max-w-3xl font-body text-base leading-relaxed text-body md:text-lg">
-          En Estudio Popnest, en la colonia Del Carmen, damos clases presenciales de 60 minutos en
-          grupos reducidos: Pilates mat, Hatha Yoga, Power Yoga, Tai Chi, Sound Healing, Belly
-          Dance y Stretching. Clase suelta ${SINGLE_CLASS_PRICE_MXN} MXN; los paquetes y las
-          reservas están en Fitune.
-        </p>
-        <div className="mt-6 flex flex-wrap gap-3">
-          <a
-            href={withUtm(fituneUrls.schedule, 'clases')}
-            rel="noopener"
-            className="inline-flex rounded-md bg-primary px-6 py-3 font-body font-semibold text-white transition-colors hover:bg-secondary"
-          >
-            Reservar clase
-          </a>
-          <a
-            href={withUtm(fituneUrls.pricing, 'clases-paquetes')}
-            rel="noopener"
-            className="inline-flex rounded-md border border-primary px-6 py-3 font-body font-semibold text-primary transition-colors hover:bg-primary/5"
-          >
-            Ver paquetes
-          </a>
+      <section className="relative flex min-h-[min(80vh,640px)] items-end overflow-hidden">
+        <img
+          src="/images/clases/stretching-clase.webp"
+          alt="Alumnos sentados en una clase en el salón con espejos de Estudio Popnest, Coyoacán"
+          width={1600}
+          height={1066}
+          fetchPriority="high"
+          className="absolute inset-0 h-full w-full object-cover object-[50%_40%]"
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10"
+          aria-hidden
+        />
+        <div className="relative z-10 mx-auto w-full max-w-5xl px-6 pb-12 pt-32 text-white lg:px-12">
+          <p className="font-body text-xs font-semibold uppercase tracking-[0.25em] text-white/80">
+            Estudio Popnest · Coyoacán
+          </p>
+          <h1 className="mt-3 max-w-3xl font-heading text-4xl font-bold leading-tight md:text-5xl">
+            Clases de yoga, Pilates y bienestar en Coyoacán
+          </h1>
+          <p className="mt-4 max-w-2xl font-body text-base leading-relaxed text-white/95 md:text-lg">
+            Clases presenciales de 60 minutos en grupos reducidos, en la colonia Del Carmen. Clase
+            suelta ${SINGLE_CLASS_PRICE_MXN} MXN; los paquetes y las reservas están en Fitune.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a
+              href={withUtm(fituneUrls.schedule, 'clases')}
+              rel="noopener"
+              className="inline-flex rounded-md bg-primary px-6 py-3 font-body font-semibold text-white transition-colors hover:bg-secondary"
+            >
+              Reservar clase
+            </a>
+            <a
+              href="#paquetes"
+              className="inline-flex rounded-md border border-white px-6 py-3 font-body font-semibold text-white transition-colors hover:bg-white/10"
+            >
+              Ver paquetes
+            </a>
+          </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 pb-16 lg:px-12">
+      <section className="mx-auto max-w-5xl px-6 pb-2 pt-12 lg:px-12">
+        <p className="max-w-3xl font-body text-base leading-relaxed text-body md:text-lg">
+          En Estudio Popnest damos Pilates mat, Hatha Yoga, Power Yoga, Tai Chi, Sound Healing,
+          Belly Dance y Stretching, en grupos reducidos y con coaches presentes. Elige tu práctica:
+        </p>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6 pb-16 pt-6 lg:px-12">
         <ul className="grid gap-6 md:grid-cols-2">
           {classTypes.map((c) => (
             <li key={c.id}>
@@ -94,8 +115,8 @@ export function Clases() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 pb-16 lg:px-12" aria-labelledby="paquetes">
-        <h2 id="paquetes" className="font-heading text-2xl font-bold text-ink md:text-3xl">
+      <section id="paquetes" className="mx-auto max-w-5xl scroll-mt-20 px-6 pb-16 lg:px-12" aria-labelledby="paquetes-title">
+        <h2 id="paquetes-title" className="font-heading text-2xl font-bold text-ink md:text-3xl">
           Paquetes y precios
         </h2>
         <p className="mt-2 max-w-3xl font-body text-body">
