@@ -11,14 +11,21 @@ import { SobreNosotros } from './pages/SobreNosotros'
 import { Terminos } from './pages/Terminos'
 import { Privacidad } from './pages/Privacidad'
 import { NotFound } from './pages/NotFound'
+import { Clases } from './pages/Clases'
+import { ClaseLanding } from './pages/ClaseLanding'
+import { Horario } from './pages/Horario'
 
-function App() {
+/** Rutas de la app (sin router): se usan en el navegador y en el prerenderizado. */
+export function AppRoutes() {
   return (
-    <BrowserRouter>
+    <>
       <ScrollToTop />
       <Routes>
         <Route element={<MainLayout />}>
           <Route index element={<Home />} />
+          <Route path="classes" element={<Clases />} />
+          <Route path="clases/:slug" element={<ClaseLanding />} />
+          <Route path="horario" element={<Horario />} />
           <Route path="planes" element={<Planes />} />
           <Route path="salas-de-juntas" element={<SalasJuntas />} />
           <Route path="oficinas-largo-plazo" element={<OficinasLargoPlazo />} />
@@ -31,6 +38,14 @@ function App() {
           <Route path="*" element={<Navigate to="/404" replace />} />
         </Route>
       </Routes>
+    </>
+  )
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppRoutes />
     </BrowserRouter>
   )
 }
