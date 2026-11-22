@@ -112,7 +112,7 @@ export const classTypes: ClassType[] = [
   },
   {
     "id": "pilates",
-    "name": "Pilates",
+    "name": "Pilates mat",
     "teacher": "Blanca Bear",
     "teacherId": 1,
     "duration": 60,
