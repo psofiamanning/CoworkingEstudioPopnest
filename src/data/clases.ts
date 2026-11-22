@@ -165,7 +165,7 @@ export const classTypes: ClassType[] = [
     "duration": 60,
     "description": "Clase de danza árabe en Coyoacán que combina técnica, coordinación y expresión corporal. Fortalece el cuerpo, mejora la postura y reconecta con tu confianza. No necesitas experiencia previa.",
     "fullDescription": "La clase de Belly Dance es una práctica de danza árabe que combina técnica, coordinación y expresión corporal. A través de movimientos fluidos y dinámicos, fortalecerás el cuerpo, mejorarás tu postura y conectarás con tu confianza y feminidad.\n\nCada sesión integra calentamiento, trabajo de aislamientos y desplazamientos, y una secuencia final para disfrutar el movimiento. No necesitas experiencia previa: la práctica se adapta a todos los niveles.",
-    "image": "/images/clases/tai-chi.png"
+    "image": "/images/clases/belly-dance.png"
   },
   {
     "id": "stretching",
@@ -175,7 +175,7 @@ export const classTypes: ClassType[] = [
     "duration": 60,
     "description": "Clase de estiramiento en Coyoacán para mejorar flexibilidad, movilidad y postura mediante estiramientos conscientes y progresivos. Apta para todos los niveles.",
     "fullDescription": "Stretching es una clase enfocada en mejorar la flexibilidad, la movilidad y la postura mediante estiramientos conscientes y progresivos. Libera la tensión acumulada, amplía tu rango de movimiento y disfruta una sensación de ligereza y bienestar.\n\nLa sesión avanza de forma gradual, con respiración guiada y opciones para cada cuerpo. Es una práctica apta para todos los niveles, ideal para complementar tu entrenamiento o para tus días de recuperación.",
-    "image": "/images/clases/pilates.png",
+    "image": "/images/clases/stretching.png",
     "whatToBring": [
       "tu propio mat de yoga"
     ]

@@ -29,16 +29,18 @@ Estado: las páginas de clases ya existen en este repositorio (rama `migracion-w
 | `/packages` | `/classes` | Los paquetes y precios están en Fitune |
 | `/ubicacion` | `/contacto` | |
 | `/coworking` | `/planes` | |
+| `/talleres` | `/talleres` | Lista de talleres: ahora en Fitune (eventos) |
+| `/run-club` | `/run-club` | |
 | `/privacidad` | `/privacidad` | |
 | `/terminos` | `/terminos` | |
 
-## Pendientes: páginas que NO se migraron todavía
+## Qué NO se redirige
 
-- `/renta-salon`: `src/pages/Eventos.tsx` todavía enlaza a `popnest.app/renta-salon`. No redirigir hasta que ese flujo tenga otro destino.
-- `/talleres`, `/run-club`: sin página equivalente aquí. Mantenerlas en popnest.app o crear páginas nuevas antes de redirigirlas.
-- Rutas de cuenta y reserva (`/booking`, `/login`, `/mis-reservas`, `/admin`…): siguen en popnest.app hasta el 1 de diciembre de 2026 (paso a Fitune).
+- `/renta-salon`: en popnest.app es el **flujo de reserva y pago del salón** (Stripe). No se redirige. La página informativa nueva está en `estudiopopnest.com/renta-salon`; la de popnest.app debe llevar `canonical` hacia ella para no competir en Google.
+- Rutas de cuenta y reserva (`/booking`, `/login`, `/mis-reservas`, `/admin`…): siguen en popnest.app hasta el paso a Fitune.
+- `/talleres/:id` (detalle de un taller): sin equivalente. Quedan en popnest.app o se redirigen a `/talleres` cuando dejen de usarse.
 
 ## Reservas
 
 Todos los botones "Reservar" enlazan a Fitune (`src/config/fitune.ts`, variable `VITE_FITUNE_URL`) con parámetros UTM por página.
-**Antes del 1 de diciembre de 2026** las reservas siguen en popnest.app: si estas páginas se publican antes de esa fecha, revisar que Fitune ya acepte reservas o cambiar el enlace temporalmente.
+Fitune ya acepta reservas, así que durante la transición se puede reservar en Fitune y en popnest.app.

@@ -63,6 +63,21 @@ export const routeSeo: Record<string, RouteSeo> = {
     description:
       'Renta de espacio en Del Carmen para talleres, workshops y encuentros. Formulario de solicitud con fecha, aforo, equipamiento y catering. Respuesta por WhatsApp.',
   },
+  '/talleres': {
+    title: 'Talleres y experiencias de bienestar en Coyoacán | Estudio Popnest',
+    description:
+      'Talleres y experiencias de bienestar con cupo limitado en Estudio Popnest, Del Carmen, Coyoacán. Consulta los próximos talleres y reserva tu lugar en línea.',
+  },
+  '/renta-salon': {
+    title: 'Renta de salón en Coyoacán por hora | Salón Coyote | Estudio Popnest',
+    description:
+      'Renta el Salón Coyote en Del Carmen, Coyoacán, para clases privadas, talleres, fotos y celebraciones. Hasta 20 personas, desde $150 MXN por hora. Reserva en línea.',
+  },
+  '/run-club': {
+    title: 'Run Club gratis en Coyoacán | Estudio Popnest',
+    description:
+      'Run club gratuito en Coyoacán: salidas en grupo miércoles 6:30 a.m. y sábado 7:30 a.m. desde Estudio Popnest, Del Carmen. Todos los niveles, sin reservación.',
+  },
   '/contacto': {
     title: 'Contacto y ubicación en Del Carmen, Coyoacán | Estudio Popnest',
     description:
@@ -112,6 +127,7 @@ export function getSitemapMeta(pathname: string): SitemapMeta {
   if (pathname === '/') return { changefreq: 'weekly', priority: 1 }
   if (pathname.startsWith('/clases/')) return { changefreq: 'monthly', priority: 0.8 }
   if (pathname === '/classes' || pathname === '/horario') return { changefreq: 'weekly', priority: 0.9 }
+  if (pathname === '/run-club' || pathname === '/renta-salon' || pathname === '/talleres') return { changefreq: 'monthly', priority: 0.8 }
   if (pathname === '/planes' || pathname === '/salas-de-juntas') return { changefreq: 'weekly', priority: 0.9 }
   if (pathname === '/privacidad' || pathname === '/terminos') return { changefreq: 'yearly', priority: 0.4 }
   return { changefreq: 'monthly', priority: 0.8 }

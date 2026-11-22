@@ -10,6 +10,8 @@ export const fituneUrls = {
   schedule: `${FITUNE_BASE_URL}/activities`,
   /** Paquetes y precios. */
   pricing: `${FITUNE_BASE_URL}/pricing`,
+  /** Eventos y talleres. */
+  events: `${FITUNE_BASE_URL}/events`,
   /** Cuenta del cliente. */
   account: `${FITUNE_BASE_URL}/user/dashboard`,
 } as const

@@ -14,6 +14,9 @@ import { NotFound } from './pages/NotFound'
 import { Clases } from './pages/Clases'
 import { ClaseLanding } from './pages/ClaseLanding'
 import { Horario } from './pages/Horario'
+import { RunClub } from './pages/RunClub'
+import { RentaSalon } from './pages/RentaSalon'
+import { Talleres } from './pages/Talleres'
 
 /** Rutas de la app (sin router): se usan en el navegador y en el prerenderizado. */
 export function AppRoutes() {
@@ -30,6 +33,9 @@ export function AppRoutes() {
           <Route path="salas-de-juntas" element={<SalasJuntas />} />
           <Route path="oficinas-largo-plazo" element={<OficinasLargoPlazo />} />
           <Route path="eventos" element={<Eventos />} />
+          <Route path="talleres" element={<Talleres />} />
+          <Route path="renta-salon" element={<RentaSalon />} />
+          <Route path="run-club" element={<RunClub />} />
           <Route path="contacto" element={<Contacto />} />
           <Route path="sobre-nosotros" element={<SobreNosotros />} />
           <Route path="terminos" element={<Terminos />} />

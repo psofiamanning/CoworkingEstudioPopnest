@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { site } from '../config/site'
 import { buildWhatsAppUrl } from '../lib/whatsapp'
 
@@ -87,6 +88,32 @@ export function Eventos() {
               Preguntar por WhatsApp
             </a>
           </div>
+        </div>
+      </section>
+
+      <section className="border-b border-neutral/60 bg-white" aria-labelledby="eventos-mas">
+        <div className="mx-auto max-w-5xl px-6 py-12 lg:px-12">
+          <h2 id="eventos-mas" className="font-heading text-xl font-bold text-primary md:text-2xl">
+            Más para hacer en Estudio Popnest
+          </h2>
+          <ul className="mt-6 grid gap-4 md:grid-cols-3">
+            {[
+              { to: '/talleres', title: 'Talleres y experiencias', text: 'Sesiones especiales de bienestar con cupo limitado.' },
+              { to: '/run-club', title: 'Run Club gratis', text: 'Miércoles 6:30 a.m. y sábado 7:30 a.m., todos los niveles.' },
+              { to: '/renta-salon', title: 'Renta de salón', text: 'Precios por hora, hasta 20 personas, con reserva en línea.' },
+            ].map((item) => (
+              <li key={item.to}>
+                <Link
+                  to={item.to}
+                  className="block h-full rounded-xl border border-neutral bg-[#fbfaf9] p-5 transition-colors hover:border-primary"
+                >
+                  <h3 className="font-heading text-lg font-semibold text-[#111827]">{item.title}</h3>
+                  <p className="mt-2 font-body text-sm leading-relaxed text-body">{item.text}</p>
+                  <span className="mt-3 inline-block font-body text-sm font-semibold text-primary">Ver más</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
