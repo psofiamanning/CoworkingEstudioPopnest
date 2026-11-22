@@ -10,6 +10,7 @@ import {
   slugForClass,
 } from '../lib/clases'
 import { buildBreadcrumb } from '../lib/schema'
+import { formatMxn, paquetes } from '../data/paquetes'
 
 export function Clases() {
   return (
@@ -80,6 +81,50 @@ export function Clases() {
         <p className="mt-8 font-body text-sm text-body">
           ¿Prefieres ver todo junto? Consulta el <Link to="/horario" className="text-primary underline">horario semanal</Link>.
         </p>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6 pb-16 lg:px-12" aria-labelledby="paquetes">
+        <h2 id="paquetes" className="font-heading text-2xl font-bold text-[#111827] md:text-3xl">
+          Paquetes y precios
+        </h2>
+        <p className="mt-2 max-w-3xl font-body text-body">
+          Clase suelta {formatMxn(SINGLE_CLASS_PRICE_MXN)} MXN. Los paquetes son válidos para todas
+          las clases y se compran en Fitune.
+        </p>
+        <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {paquetes.map((p) => (
+            <li
+              key={p.name}
+              className={`flex flex-col rounded-xl border bg-white p-5 ${p.popular ? 'border-primary' : 'border-neutral'}`}
+            >
+              {p.popular && (
+                <span className="mb-2 w-fit rounded-full bg-primary px-2 py-0.5 font-body text-xs font-semibold text-white">
+                  Popular
+                </span>
+              )}
+              <h3 className="font-heading text-lg font-semibold text-[#111827]">{p.name}</h3>
+              <p className="mt-2 font-heading text-2xl font-bold text-primary">
+                {formatMxn(p.price)} <span className="text-sm font-normal text-[#6b7280]">MXN</span>
+              </p>
+              {p.regularPrice && (
+                <p className="font-body text-sm text-[#6b7280]">
+                  <s>{formatMxn(p.regularPrice)}</s> · ahorras {formatMxn(p.regularPrice - p.price)}
+                </p>
+              )}
+              <p className="mt-2 font-body text-sm text-body">
+                {p.classes === 'ilimitadas' ? 'Clases ilimitadas' : `${p.classes} clases`} · vigencia {p.validity}
+              </p>
+              {p.note && <p className="font-body text-sm text-body">{p.note}</p>}
+            </li>
+          ))}
+        </ul>
+        <a
+          href={withUtm(fituneUrls.pricing, 'clases-paquetes')}
+          rel="noopener"
+          className="mt-6 inline-flex rounded-md bg-primary px-6 py-3 font-body font-semibold text-white transition-colors hover:bg-secondary"
+        >
+          Comprar en Fitune
+        </a>
       </section>
     </main>
   )
