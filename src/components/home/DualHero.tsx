@@ -48,7 +48,6 @@ export function DualHero() {
   useDeferredVideo(videoRef)
 
   return (
-    <>
     <section aria-label="Coworking y clases" className="grid min-h-[min(90vh,820px)] md:grid-cols-2">
       {/* Coworking */}
       <div className="relative flex min-h-[460px] items-center justify-center overflow-hidden">
@@ -135,12 +134,5 @@ export function DualHero() {
         </div>
       </div>
     </section>
-    <nav aria-label="Secciones" className="border-b border-neutral bg-white">
-      <div className="mx-auto flex max-w-5xl justify-center gap-8 px-6 py-3 font-body text-sm font-semibold">
-        <a href="#coworking" className="text-primary hover:underline">Coworking ↓</a>
-        <a href="#wellness" className="text-primary hover:underline">Wellness ↓</a>
-      </div>
-    </nav>
-    </>
   )
 }

@@ -15,8 +15,6 @@ export function Home() {
     <>
       <DualHero />
 
-      <div id="coworking" className="scroll-mt-20" />
-
       <section className="bg-primary py-16 text-white">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 px-6 lg:flex-row lg:justify-between lg:px-12">
           <p className="max-w-3xl text-center font-body text-lg leading-relaxed md:text-xl lg:text-left">
