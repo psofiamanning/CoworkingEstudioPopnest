@@ -3,11 +3,6 @@ import { espaciosGallery } from '../data/espaciosGallery'
 import { DualHero } from '../components/home/DualHero'
 import { WellnessHome } from '../components/home/WellnessHome'
 
-/** Hero: `public/images/home/`. Galería: `espaciosGallery`. */
-const img = {
-  hero: '/images/home/hero-sala.png',
-}
-
 export function Home() {
   return (
     <>
