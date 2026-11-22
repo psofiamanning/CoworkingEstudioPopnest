@@ -11,6 +11,7 @@ import {
 } from '../lib/clases'
 import { buildBreadcrumb } from '../lib/schema'
 import { formatMxn, paquetes } from '../data/paquetes'
+import { FituneNotice } from '../components/FituneNotice'
 
 export function Clases() {
   return (
@@ -61,6 +62,7 @@ export function Clases() {
               Ver paquetes
             </a>
           </div>
+          <FituneNotice campaign="clases-hero" className="mt-5 text-white/90 [&_img]:rounded [&_img]:bg-white [&_img]:px-2 [&_img]:py-1" />
         </div>
       </section>
 
@@ -157,6 +159,7 @@ export function Clases() {
         >
           Comprar en Fitune
         </a>
+        <FituneNotice campaign="clases-paquetes-aviso" className="mt-4" />
       </section>
     </main>
   )

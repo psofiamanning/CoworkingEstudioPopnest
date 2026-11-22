@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { JsonLd } from '../seo/JsonLd'
 import { fituneUrls, withUtm } from '../../config/fitune'
+import { FituneNotice } from '../FituneNotice'
 import { formatMxn, paquetes } from '../../data/paquetes'
 import {
   DAYS_ORDER,
@@ -190,6 +191,7 @@ export function WellnessHome() {
               Ver horario completo
             </Link>
           </div>
+          <FituneNotice campaign="home-horario-aviso" className="mt-4" />
         </div>
       </section>
 
@@ -233,6 +235,7 @@ export function WellnessHome() {
             <a href={withUtm(fituneUrls.pricing, 'home-paquetes')} rel="noopener" className={btnPrimary}>
               Comprar paquete
             </a>
+            <FituneNotice campaign="home-paquetes-aviso" className="mt-4" />
           </div>
         </div>
       </section>

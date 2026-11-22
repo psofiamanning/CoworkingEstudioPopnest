@@ -1,6 +1,7 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { JsonLd } from '../components/seo/JsonLd'
 import { fituneUrls, withUtm } from '../config/fitune'
+import { FituneNotice } from '../components/FituneNotice'
 import { site } from '../config/site'
 import {
   SINGLE_CLASS_PRICE_MXN,
@@ -96,6 +97,7 @@ export function ClaseLanding() {
                 Preguntar por WhatsApp
               </a>
             </div>
+            <FituneNotice campaign={`${slug}-hero-aviso`} className="mt-4" />
           </div>
         </div>
       </section>
@@ -176,6 +178,7 @@ export function ClaseLanding() {
           </a>{' '}
           o en el <Link to="/horario" className="text-primary underline">horario semanal</Link>.
         </p>
+        <FituneNotice campaign={`${slug}-aviso`} className="mt-4" />
       </section>
 
       {teachers.length > 0 && (

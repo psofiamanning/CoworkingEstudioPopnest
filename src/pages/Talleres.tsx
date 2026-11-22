@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { JsonLd } from '../components/seo/JsonLd'
 import { fituneUrls, withUtm } from '../config/fitune'
+import { FituneNotice } from '../components/FituneNotice'
 import { site } from '../config/site'
 import { buildBreadcrumb } from '../lib/schema'
 import { buildWhatsAppUrl } from '../lib/whatsapp'
@@ -54,6 +55,9 @@ export function Talleres() {
             Preguntar por WhatsApp
           </a>
         </div>
+        <FituneNotice campaign="talleres-aviso" className="mt-4">
+          La reservación y el pago de los talleres se hacen en Fitune.
+        </FituneNotice>
       </section>
 
       <section className="mx-auto max-w-5xl px-6 pb-16 lg:px-12">

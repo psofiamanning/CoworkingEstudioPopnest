@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { JsonLd } from '../components/seo/JsonLd'
 import { fituneUrls, withUtm } from '../config/fitune'
+import { FituneNotice } from '../components/FituneNotice'
 import { DAYS_ORDER, classPath, classTypes, getScheduleLines, slugForClass } from '../lib/clases'
 import { buildBreadcrumb } from '../lib/schema'
 
@@ -55,6 +56,7 @@ export function Horario() {
         >
           Reservar en Fitune
         </a>
+        <FituneNotice campaign="horario-aviso" className="mt-4" />
       </section>
 
       <section className="mx-auto max-w-5xl px-6 pb-16 lg:px-12">
