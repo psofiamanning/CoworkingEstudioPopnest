@@ -96,5 +96,12 @@ export function getClassSeo(slug: string): { title: string; description: string 
   return { title: landingSeoTitle[id], description: landingSeoDescription[id] }
 }
 
-export { classTypes }
+/** Prioridad SEO: Pilates mat primero; el resto se reordena según demanda en Coyoacán. */
+const SEO_PRIORITY: string[] = ['pilates']
+const orderedClassTypes = [...classTypes].sort((a, b) => {
+  const ia = SEO_PRIORITY.indexOf(String(a.id))
+  const ib = SEO_PRIORITY.indexOf(String(b.id))
+  return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib)
+})
+export { orderedClassTypes as classTypes }
 export type { ClassId, ClassType }

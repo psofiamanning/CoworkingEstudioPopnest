@@ -24,8 +24,8 @@ export function Clases() {
 
       <section className="relative flex min-h-[min(80vh,640px)] items-end overflow-hidden">
         <img
-          src="/images/clases/stretching-clase.webp"
-          alt="Alumnos sentados en una clase en el salón con espejos de Estudio Popnest, Coyoacán"
+          src="/images/clases/pilates-clase.webp"
+          alt="Clase de Pilates mat en Estudio Popnest, Coyoacán"
           width={1600}
           height={1066}
           fetchPriority="high"
@@ -40,10 +40,10 @@ export function Clases() {
             Estudio Popnest · Coyoacán
           </p>
           <h1 className="mt-3 max-w-3xl font-heading text-4xl font-bold leading-tight md:text-5xl">
-            Clases de yoga, Pilates y bienestar en Coyoacán
+            Pilates mat, yoga y bienestar en Coyoacán
           </h1>
           <p className="mt-4 max-w-2xl font-body text-base leading-relaxed text-white/95 md:text-lg">
-            Clases presenciales de 60 minutos en grupos reducidos, en la colonia Del Carmen. Clase
+            Clases de Pilates mat y yoga de 60 minutos en grupos reducidos, en la colonia Del Carmen. Clase
             suelta ${SINGLE_CLASS_PRICE_MXN} MXN; los paquetes y las reservas están en Fitune.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
@@ -66,7 +66,7 @@ export function Clases() {
 
       <section className="mx-auto max-w-5xl px-6 pb-2 pt-12 lg:px-12">
         <p className="max-w-3xl font-body text-base leading-relaxed text-body md:text-lg">
-          En Estudio Popnest damos Pilates mat, Hatha Yoga, Power Yoga, Tai Chi, Sound Healing,
+          En Estudio Popnest damos Pilates mat (en colchoneta, máximo 10 personas), Hatha Yoga, Power Yoga, Tai Chi, Sound Healing,
           Belly Dance y Stretching, en grupos reducidos y con coaches presentes. Elige tu práctica:
         </p>
       </section>

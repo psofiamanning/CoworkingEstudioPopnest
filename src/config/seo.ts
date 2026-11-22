@@ -34,9 +34,9 @@ export const routeSeo: Record<string, RouteSeo> = {
       'Coworking, salas de juntas y clases de Pilates, yoga, Tai Chi y Sound Healing en la colonia Del Carmen, Coyoacán (CDMX), con café y terraza. A pasos del Museo Frida Kahlo, Londres 105.',
   },
   '/classes': {
-    title: 'Clases de yoga, Pilates y bienestar en Coyoacán | Estudio Popnest',
+    title: 'Pilates mat y yoga en Coyoacán | Clases en Del Carmen | Estudio Popnest',
     description:
-      'Pilates mat, Hatha Yoga, Power Yoga, Tai Chi, Sound Healing, Belly Dance y Stretching en Del Carmen, Coyoacán. Grupos reducidos, clases de 60 minutos. Reserva en línea.',
+      'Clases de Pilates mat en Coyoacán, además de Hatha Yoga, Power Yoga, Tai Chi, Sound Healing, Belly Dance y Stretching en Del Carmen. Grupos reducidos de 60 minutos. Reserva en línea.',
   },
   '/horario': {
     title: 'Horario de clases en Coyoacán | Estudio Popnest',
