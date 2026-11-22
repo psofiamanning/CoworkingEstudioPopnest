@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { espaciosGallery } from '../data/espaciosGallery'
+import { DualHero } from '../components/home/DualHero'
 import { classPath, classTypes, slugForClass } from '../lib/clases'
 
 /** Hero: `public/images/home/`. Galería: `espaciosGallery`. */
@@ -32,34 +33,7 @@ export function Home() {
 
   return (
     <>
-      <section className="relative flex min-h-[min(90vh,820px)] items-center justify-center overflow-hidden">
-        <img
-          src={img.hero}
-          alt="Sala de reuniones Estudio Popnest"
-          className="absolute inset-0 h-full w-full object-cover"
-          width={1920}
-          height={1080}
-        />
-        <div className="absolute inset-0 bg-black/45" aria-hidden />
-        <div className="relative z-10 max-w-3xl px-6 py-20 text-center text-white">
-          <h1 className="font-heading text-4xl font-bold tracking-tight md:text-5xl">
-            Estudio Popnest
-          </h1>
-          <p className="mt-3 font-heading text-xl font-medium md:text-2xl">
-            Privacidad. Diseño. Creatividad.
-          </p>
-          <p className="mx-auto mt-6 max-w-xl font-body text-base leading-relaxed text-white/95 md:text-lg">
-            Coworking en Coyoacán, a pasos del Museo Frida Kahlo: salas de reuniones,
-            áreas comunes y cafetería para trabajar solo o con tu equipo.
-          </p>
-          <Link
-            to="/planes"
-            className="mt-10 inline-flex rounded-md bg-white px-8 py-3 font-body font-semibold text-[#1f2937] transition-colors hover:bg-quaternary"
-          >
-            Reservar
-          </Link>
-        </div>
-      </section>
+      <DualHero />
 
       <section className="py-16" aria-labelledby="home-clases">
         <div className="mx-auto max-w-5xl px-6 lg:px-12">
