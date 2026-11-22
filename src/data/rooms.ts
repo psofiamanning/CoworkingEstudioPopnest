@@ -42,7 +42,7 @@ export const rooms: Room[] = [
     name: 'Dakota',
     priceLabel: 'Desde $400 MXN por hora',
     capacityLabel: 'Hasta 10 personas',
-    image: '/images/espacios/sala-dakota.png',
+    image: '/images/espacios/sala-dakota.webp',
     imageFit: 'contain',
     imageWidth: 576,
     imageHeight: 1024,
@@ -55,7 +55,7 @@ export const rooms: Room[] = [
     name: 'Bohemios',
     priceLabel: 'Desde $400 MXN por hora',
     capacityLabel: '8 asientos',
-    image: '/images/home/reunion-sala-azul.png',
+    image: '/images/home/reunion-sala-azul.webp',
     status: 'unavailable_office',
   },
   {
@@ -74,7 +74,7 @@ export const rooms: Room[] = [
     name: 'Carmelo',
     priceLabel: 'Desde $300 MXN por hora',
     capacityLabel: '4 asientos',
-    image: '/images/espacios/sala-azul-mural-tv.png',
+    image: '/images/espacios/sala-azul-mural-tv.webp',
     status: 'unavailable_office',
   },
   {
@@ -82,7 +82,7 @@ export const rooms: Room[] = [
     name: 'Sacramento',
     priceLabel: 'Desde $300 MXN por hora',
     capacityLabel: '4 asientos',
-    image: '/images/espacios/sala-terracota-oval.png',
+    image: '/images/espacios/sala-terracota-oval.webp',
     status: 'unavailable_office',
   },
   {
@@ -90,7 +90,7 @@ export const rooms: Room[] = [
     name: 'Oaxaca',
     priceLabel: 'Desde $300 MXN por hora',
     capacityLabel: '4 asientos',
-    image: '/images/home/reunion-sala-azul.png',
+    image: '/images/home/reunion-sala-azul.webp',
     status: 'unavailable_office',
   },
   {
@@ -98,7 +98,7 @@ export const rooms: Room[] = [
     name: 'Oso Polar',
     priceLabel: 'Desde $300 MXN por hora',
     capacityLabel: '4 asientos',
-    image: '/images/espacios/sala-oso-polar.png',
+    image: '/images/espacios/sala-oso-polar.webp',
     status: 'unavailable_office',
   },
 ]
@@ -112,7 +112,7 @@ export const coyoteEventRoom: Room = {
   name: 'Coyote',
   priceLabel: 'Desde $400 MXN por hora',
   capacityLabel: 'Hasta 50 personas',
-  image: '/images/espacios/sala-coyote.png',
+  image: '/images/espacios/sala-coyote.webp',
   status: 'bookable',
   reservationUrl:
     'https://archieapp.co/estudio-popnest-1/public/book-a-room/b86d76bf-8f2d-563d-a704-bed3cde62080?filters=U2FsdGVkX18bGPlKMUyv4a1V4pRDothjhNFJh4%252B0liI%253D',

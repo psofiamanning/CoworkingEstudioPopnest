@@ -105,3 +105,8 @@ const orderedClassTypes = [...classTypes].sort((a, b) => {
 })
 export { orderedClassTypes as classTypes }
 export type { ClassId, ClassType }
+
+/** Miniatura ligera (≈640 px) de la foto de una clase, para tarjetas. */
+export function thumbOf(photo: string): string {
+  return photo.replace('-clase.webp', '-clase-thumb.webp')
+}
