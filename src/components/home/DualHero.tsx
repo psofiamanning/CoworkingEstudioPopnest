@@ -74,10 +74,10 @@ export function DualHero() {
             comunes y cafetería para trabajar solo o con tu equipo.
           </p>
           <Link
-            to="/planes"
+            to="/oficinas-largo-plazo"
             className="mt-8 inline-flex rounded-md bg-white px-8 py-3 font-body font-semibold text-[#1f2937] transition-colors hover:bg-quaternary"
           >
-            Reservar
+            Ver oficinas
           </Link>
         </div>
       </div>
