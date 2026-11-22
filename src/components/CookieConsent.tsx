@@ -4,6 +4,7 @@ import {
   useContext,
   useMemo,
   useState,
+  useSyncExternalStore,
   type ReactNode,
 } from 'react'
 import { Link } from 'react-router-dom'
@@ -32,22 +33,29 @@ export function useCookieConsent(): CookieConsentContextValue {
 }
 
 export function CookieConsentProvider({ children }: { children: ReactNode }) {
-  const [preferences, setPreferences] = useState<CookiePreferences | null>(() =>
-    getStoredCookieConsent(),
+  // `ready` es false en el servidor y en la hidratación, y true ya en el navegador:
+  // así el HTML prerenderizado y la hidratación coinciden y luego se lee la elección guardada.
+  const ready = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
   )
+  const stored = useMemo(() => (ready ? getStoredCookieConsent() : null), [ready])
+  const [chosen, setChosen] = useState<CookiePreferences | null>(null)
+  const preferences = chosen ?? stored
 
-  const showBanner = preferences === null
+  const showBanner = ready && preferences === null
 
   const acceptAll = useCallback(() => {
     const next: CookiePreferences = { necessary: true, analytics: true }
     saveCookieConsent(next)
-    setPreferences(next)
+    setChosen(next)
   }, [])
 
   const acceptNecessaryOnly = useCallback(() => {
     const next: CookiePreferences = { necessary: true, analytics: false }
     saveCookieConsent(next)
-    setPreferences(next)
+    setChosen(next)
   }, [])
 
   const value = useMemo(

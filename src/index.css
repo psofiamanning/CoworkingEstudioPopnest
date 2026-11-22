@@ -12,6 +12,13 @@
   --color-grey-placeholder: #b5aeae;
   --color-neutral: #ded5d5;
   --color-surface-dark: #2c333d;
+
+  /* Paleta crema de popnest.app para las páginas de wellness */
+  --color-cream: #f4ede2;
+  --color-cream-elevated: #fbf6ec;
+  --color-cream-secondary: #ede4d2;
+  --color-cream-border: #d9cdb8;
+  --color-ink: #2d2e35;
 }
 
 @layer base {

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { site } from '../config/site'
 import { buildWhatsAppUrl } from '../lib/whatsapp'
 
@@ -87,6 +88,85 @@ export function Eventos() {
               Preguntar por WhatsApp
             </a>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-cream py-14 lg:py-16" aria-labelledby="eventos-mas">
+        <div className="mx-auto max-w-6xl px-6 lg:px-12">
+          <div className="text-center">
+            <h2 id="eventos-mas" className="font-heading text-2xl font-bold text-primary md:text-4xl">
+              Más para hacer en Estudio Popnest
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl font-body text-body md:text-lg">
+              Tres formas distintas de vivir el estudio. Elige la tuya.
+            </p>
+          </div>
+          <ul className="mt-10 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                to: '/talleres',
+                tag: 'Talleres',
+                title: 'Talleres y experiencias',
+                text: 'Sesiones especiales de bienestar con cupo limitado.',
+                cta: 'Ver talleres',
+                photo: '/images/espacios/coyote-movimiento.jpg',
+                overlay: 'bg-[#2A2D3D]/75',
+                icon: '✦',
+              },
+              {
+                to: '/run-club',
+                tag: 'Gratis',
+                title: 'Run Club',
+                text: 'Miércoles 6:30 a.m. y sábado 7:30 a.m., todos los niveles.',
+                cta: 'Unirme al Run Club',
+                photo: null,
+                overlay: 'bg-primary',
+                icon: '→',
+              },
+              {
+                to: '/renta-salon',
+                tag: 'Renta',
+                title: 'Renta de salón',
+                text: 'Precios por hora, hasta 20 personas, con reserva en línea.',
+                cta: 'Ver precios',
+                photo: '/images/espacios/salon-wellness-espejos.jpg',
+                overlay: 'bg-black/55',
+                icon: '◧',
+              },
+            ].map((item) => (
+              <li key={item.to}>
+                <Link
+                  to={item.to}
+                  className="group relative flex min-h-[340px] h-full flex-col justify-between overflow-hidden rounded-2xl p-7 text-white shadow-md transition-transform hover:-translate-y-1 hover:shadow-xl"
+                >
+                  {item.photo && (
+                    <img
+                      src={item.photo}
+                      alt=""
+                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  )}
+                  <div className={`absolute inset-0 ${item.overlay}`} aria-hidden />
+                  <div className="relative z-10 flex items-start justify-between">
+                    <span className="rounded-full bg-white px-4 py-1 font-body text-xs font-bold uppercase tracking-[0.2em] text-primary">
+                      {item.tag}
+                    </span>
+                    <span aria-hidden className="font-heading text-5xl leading-none text-white/40">
+                      {item.icon}
+                    </span>
+                  </div>
+                  <div className="relative z-10">
+                    <h3 className="font-heading text-3xl font-bold leading-tight">{item.title}</h3>
+                    <p className="mt-3 font-body leading-relaxed text-white/90">{item.text}</p>
+                    <span className="mt-6 inline-flex rounded-md bg-white px-6 py-3 font-body font-semibold text-[#1f2937] transition-colors group-hover:bg-cream">
+                      {item.cta} →
+                    </span>
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

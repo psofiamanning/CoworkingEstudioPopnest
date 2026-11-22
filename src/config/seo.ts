@@ -1,3 +1,5 @@
+import { classPath, classSlugs, getClassSeo } from '../lib/clases'
+
 /** URL pública del sitio (sin barra final). Usar en producción vía `VITE_SITE_URL`. */
 export function getSiteOrigin(): string {
   const raw = import.meta.env.VITE_SITE_URL ?? 'https://estudiopopnest.com'
@@ -8,7 +10,7 @@ export const business = {
   name: 'Estudio Popnest',
   legalName: 'Estudio Popnest',
   description:
-    'Coworking y salas de juntas en la colonia Del Carmen, Coyoacán (Ciudad de México): membresías, pase por día, Wi‑Fi, café y terraza, cerca del Museo Frida Kahlo.',
+    'Coworking, salas de juntas y clases de Pilates, yoga y bienestar en la colonia Del Carmen, Coyoacán (Ciudad de México): membresías, pase por día, café y terraza, cerca del Museo Frida Kahlo.',
   streetAddress: 'Londres 105',
   addressLocality: 'Coyoacán',
   addressRegion: 'Ciudad de México',
@@ -27,9 +29,19 @@ export type RouteSeo = { title: string; description: string; noIndex?: boolean }
 /** Meta por ruta (pathname con react-router, sin dominio) */
 export const routeSeo: Record<string, RouteSeo> = {
   '/': {
-    title: 'Estudio Popnest | Coworking y salas de juntas en Del Carmen, Coyoacán',
+    title: 'Estudio Popnest | Coworking, Pilates y yoga en Del Carmen, Coyoacán',
     description:
-      'Coworking en la colonia Del Carmen (Coyoacán, Ciudad de México): salas de reuniones por hora, pase por día y membresías, con Wi‑Fi, café y terraza. A pasos del Museo Frida Kahlo, Londres 105.',
+      'Coworking, salas de juntas y clases de Pilates, yoga, Tai Chi y Sound Healing en la colonia Del Carmen, Coyoacán (CDMX), con café y terraza. A pasos del Museo Frida Kahlo, Londres 105.',
+  },
+  '/classes': {
+    title: 'Pilates mat y yoga en Coyoacán | Clases en Del Carmen | Estudio Popnest',
+    description:
+      'Clases de Pilates mat en Coyoacán, además de Hatha Yoga, Power Yoga, Tai Chi, Sound Healing, Belly Dance y Stretching en Del Carmen. Grupos reducidos de 60 minutos. Reserva en línea.',
+  },
+  '/horario': {
+    title: 'Horario de clases en Coyoacán | Estudio Popnest',
+    description:
+      'Horario semanal de Pilates, yoga, Tai Chi, Sound Healing, Belly Dance y Stretching en Estudio Popnest, Londres 105, Del Carmen, Coyoacán. Reserva tu lugar en línea.',
   },
   '/planes': {
     title: 'Membresías y pase por día en Coyoacán | Estudio Popnest',
@@ -50,6 +62,21 @@ export const routeSeo: Record<string, RouteSeo> = {
     title: 'Eventos, talleres y workshops en Coyoacán | Estudio Popnest',
     description:
       'Renta de espacio en Del Carmen para talleres, workshops y encuentros. Formulario de solicitud con fecha, aforo, equipamiento y catering. Respuesta por WhatsApp.',
+  },
+  '/talleres': {
+    title: 'Talleres y experiencias de bienestar en Coyoacán | Estudio Popnest',
+    description:
+      'Talleres y experiencias de bienestar con cupo limitado en Estudio Popnest, Del Carmen, Coyoacán. Consulta los próximos talleres y reserva tu lugar en línea.',
+  },
+  '/renta-salon': {
+    title: 'Renta de salón en Coyoacán por hora | Salón Coyote | Estudio Popnest',
+    description:
+      'Renta el Salón Coyote en Del Carmen, Coyoacán, para clases privadas, talleres, fotos y celebraciones. Hasta 20 personas, desde $150 MXN por hora. Reserva en línea.',
+  },
+  '/run-club': {
+    title: 'Run Club gratis en Coyoacán | Estudio Popnest',
+    description:
+      'Run club gratuito en Coyoacán: salidas en grupo miércoles 6:30 a.m. y sábado 7:30 a.m. desde Estudio Popnest, Del Carmen. Todos los niveles, sin reservación.',
   },
   '/contacto': {
     title: 'Contacto y ubicación en Del Carmen, Coyoacán | Estudio Popnest',
@@ -80,5 +107,28 @@ export const routeSeo: Record<string, RouteSeo> = {
 
 export function getSeoForPath(pathname: string): RouteSeo {
   const normalized = pathname.replace(/\/$/, '') || '/'
-  return routeSeo[normalized] ?? routeSeo['/']
+  if (normalized.startsWith('/clases/')) {
+    const seo = getClassSeo(normalized.replace('/clases/', ''))
+    if (seo) return seo
+    return routeSeo['/404']
+  }
+  return routeSeo[normalized] ?? routeSeo['/404']
+}
+
+/** Rutas públicas e indexables (se prerenderizan y van al sitemap). */
+export const publicRoutes: string[] = [
+  ...Object.keys(routeSeo).filter((r) => r !== '/404'),
+  ...classSlugs.map(classPath),
+]
+
+type SitemapMeta = { changefreq: string; priority: number }
+
+export function getSitemapMeta(pathname: string): SitemapMeta {
+  if (pathname === '/') return { changefreq: 'weekly', priority: 1 }
+  if (pathname.startsWith('/clases/')) return { changefreq: 'monthly', priority: 0.8 }
+  if (pathname === '/classes' || pathname === '/horario') return { changefreq: 'weekly', priority: 0.9 }
+  if (pathname === '/run-club' || pathname === '/renta-salon' || pathname === '/talleres') return { changefreq: 'monthly', priority: 0.8 }
+  if (pathname === '/planes' || pathname === '/salas-de-juntas') return { changefreq: 'weekly', priority: 0.9 }
+  if (pathname === '/privacidad' || pathname === '/terminos') return { changefreq: 'yearly', priority: 0.4 }
+  return { changefreq: 'monthly', priority: 0.8 }
 }
