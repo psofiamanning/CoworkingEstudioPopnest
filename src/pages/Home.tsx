@@ -6,7 +6,6 @@ import { WellnessHome } from '../components/home/WellnessHome'
 /** Hero: `public/images/home/`. Galería: `espaciosGallery`. */
 const img = {
   hero: '/images/home/hero-sala.png',
-  reunion: '/images/home/reunion-sala-azul.png',
 }
 
 export function Home() {
@@ -34,45 +33,34 @@ export function Home() {
         </div>
       </section>
 
-      <section className="py-20">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2 lg:px-12">
-          <div className="overflow-hidden rounded-[2rem]">
-            <img
-              src={img.reunion}
-              alt="Sala de reuniones con mesa y paneles circulares"
-              className="h-full w-full object-cover"
-              width={800}
-              height={600}
-            />
-          </div>
-          <div>
-            <h2 className="font-heading text-[30px] font-bold leading-[1.4] text-primary">
-              Reuniones en Popnest
-            </h2>
-            <p className="mt-6 font-body leading-relaxed text-body">
-              Equipamiento para presentaciones y trabajo en equipo. Capacidad
-              según sala, de 2 a 8 personas en nuestras salas estándar.
-            </p>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Link
-                to="/salas-de-juntas"
-                className="inline-flex justify-center rounded-md bg-primary px-6 py-3 font-body font-semibold text-white transition-colors hover:bg-secondary"
-              >
-                Ver salas de reuniones
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="bg-[#fafafa] py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
-          <h2 className="font-heading text-[30px] font-bold leading-[1.4] text-[#1f2937]">
-            Nuestro espacio
+          <h2 className="font-heading text-[30px] font-bold leading-[1.4] text-primary">
+            Salas de reuniones y espacios en Popnest
           </h2>
-          <p className="mt-3 max-w-2xl font-body text-body">
-            Salas de juntas, patio y áreas comunes en Coyoacán.
+          <p className="mt-4 max-w-3xl font-body leading-relaxed text-body">
+            Contamos con salas de reuniones equipadas para presentaciones y trabajo en equipo, con
+            capacidad desde 2 y hasta 10 personas según la sala. También puedes conocer nuestro
+            patio y las áreas comunes en Coyoacán.
           </p>
+          <p className="mt-3 max-w-3xl font-body leading-relaxed text-body">
+            Para una respuesta rápida, escríbenos a{' '}
+            <a
+              href="mailto:info@estudiopopnest.com"
+              className="font-semibold text-primary underline"
+            >
+              info@estudiopopnest.com
+            </a>
+            .
+          </p>
+          <div className="mt-6">
+            <Link
+              to="/salas-de-juntas"
+              className="inline-flex justify-center rounded-md bg-primary px-6 py-3 font-body font-semibold text-white transition-colors hover:bg-secondary"
+            >
+              Ver salas de reuniones
+            </Link>
+          </div>
           <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {espaciosGallery.map((item) => (
               <div
