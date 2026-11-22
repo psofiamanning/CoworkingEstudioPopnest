@@ -17,9 +17,9 @@ export function Home() {
       <section className="bg-primary py-16 text-white">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 px-6 lg:flex-row lg:justify-between lg:px-12">
           <p className="max-w-3xl text-center font-body text-lg leading-relaxed md:text-xl lg:text-left">
-            Somos una comunidad en Coyoacán para profesionistas y creativos en
-            busca de su tercer lugar, y para personas a las que les interesa su
-            bienestar físico y mental.
+            Somos una comunidad en Coyoacán que reúne a profesionistas y creativos
+            en busca de su tercer lugar, y a quienes cuidan su bienestar físico y
+            mental.
           </p>
           <div className="shrink-0 text-white/90" aria-hidden>
             <svg className="h-16 w-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
