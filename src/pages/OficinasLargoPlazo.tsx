@@ -152,6 +152,12 @@ export function OficinasLargoPlazo() {
                 >
                   Preguntar por WhatsApp
                 </a>
+                <Link
+                  to="/planes"
+                  className="inline-flex items-center justify-center rounded-full border border-neutral px-8 py-3.5 font-body text-sm font-semibold tracking-wide text-[#1f2937] transition-colors hover:border-primary/40 hover:text-primary"
+                >
+                  Ver planes de coworking
+                </Link>
               </div>
 
               {reservationUrl && (
