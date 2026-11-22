@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { espaciosGallery } from '../data/espaciosGallery'
 import { DualHero } from '../components/home/DualHero'
-import { classPath, classTypes, slugForClass } from '../lib/clases'
+import { WellnessHome } from '../components/home/WellnessHome'
 
 /** Hero: `public/images/home/`. Galería: `espaciosGallery`. */
 const img = {
@@ -35,37 +35,7 @@ export function Home() {
     <>
       <DualHero />
 
-      <section className="py-16" aria-labelledby="home-clases">
-        <div className="mx-auto max-w-5xl px-6 lg:px-12">
-          <h2 id="home-clases" className="font-heading text-[30px] font-bold leading-[1.4] text-primary">
-            Clases de Pilates, yoga y bienestar
-          </h2>
-          <p className="mt-4 max-w-3xl font-body leading-relaxed text-body">
-            Además del coworking, en Estudio Popnest damos clases presenciales de 60 minutos en
-            grupos reducidos, en el mismo lugar: Londres 105, colonia Del Carmen, Coyoacán.
-          </p>
-          <ul className="mt-6 flex flex-wrap gap-3 font-body">
-            {classTypes.map((c) => (
-              <li key={c.id}>
-                <Link
-                  to={classPath(slugForClass(c.id))}
-                  className="inline-flex rounded-full border border-neutral bg-white px-4 py-2 text-sm text-[#111827] transition-colors hover:border-primary hover:text-primary"
-                >
-                  {c.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <div className="mt-6 flex flex-wrap gap-4 font-body text-sm">
-            <Link to="/classes" className="font-semibold text-primary underline">
-              Ver todas las clases
-            </Link>
-            <Link to="/horario" className="font-semibold text-primary underline">
-              Horario semanal
-            </Link>
-          </div>
-        </div>
-      </section>
+      <div id="coworking" className="scroll-mt-20" />
 
       <section className="bg-primary py-16 text-white">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 px-6 lg:flex-row lg:justify-between lg:px-12">
@@ -298,6 +268,8 @@ export function Home() {
           </form>
         </div>
       </section>
+
+      <WellnessHome />
     </>
   )
 }
