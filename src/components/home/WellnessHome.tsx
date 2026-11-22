@@ -104,7 +104,7 @@ export function WellnessHome() {
       </section>
 
       {/* Clases */}
-      <section className="bg-[#fbfbfc] py-16" aria-labelledby="home-clases">
+      <section className="bg-cream py-16" aria-labelledby="home-clases">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           <h2 id="home-clases" className="font-heading text-[30px] font-bold leading-[1.4] text-primary">
             Elige tu práctica
@@ -114,7 +114,7 @@ export function WellnessHome() {
               <li key={c.id}>
                 <Link
                   to={classPath(slugForClass(c.id))}
-                  className="flex h-full flex-col overflow-hidden rounded-xl border border-neutral bg-white transition-colors hover:border-primary"
+                  className="flex h-full flex-col overflow-hidden rounded-xl border border-cream-border bg-cream-elevated transition-colors hover:border-primary"
                 >
                   <img
                     src={c.image}
@@ -122,10 +122,10 @@ export function WellnessHome() {
                     width={320}
                     height={240}
                     loading="lazy"
-                    className="h-40 w-full bg-quaternary/30 object-contain p-4"
+                    className="h-40 w-full bg-cream-secondary object-contain p-4"
                   />
                   <div className="p-4">
-                    <h3 className="font-heading text-lg font-semibold text-[#111827]">{c.name}</h3>
+                    <h3 className="font-heading text-lg font-semibold text-ink">{c.name}</h3>
                     <p className="mt-1 font-body text-sm text-body">
                       {getTeachersLabel(c.id)} · {c.duration} min
                     </p>
@@ -143,7 +143,7 @@ export function WellnessHome() {
       </section>
 
       {/* Horario */}
-      <section className="py-16" aria-labelledby="home-horario">
+      <section className="bg-cream-secondary py-16" aria-labelledby="home-horario">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           <h2 id="home-horario" className="font-heading text-[30px] font-bold leading-[1.4] text-primary">
             Horario semanal
@@ -153,14 +153,14 @@ export function WellnessHome() {
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7">
             {week.map(({ day, rows }) => (
-              <div key={day} className="rounded-xl border border-neutral bg-white">
-                <h3 className="border-b border-neutral px-3 py-2 font-heading text-base font-semibold text-primary">
+              <div key={day} className="rounded-xl border border-cream-border bg-cream-elevated">
+                <h3 className="border-b border-cream-border px-3 py-2 font-heading text-base font-semibold text-primary">
                   {day}
                 </h3>
                 <ul className="space-y-2 p-3 font-body text-sm">
                   {rows.map((r) => (
                     <li key={`${r.slug}-${r.time}`}>
-                      <span className="font-semibold text-[#111827]">{r.time}</span>
+                      <span className="font-semibold text-ink">{r.time}</span>
                       <br />
                       <Link to={classPath(r.slug)} className="text-primary hover:underline">
                         {r.name}
@@ -183,7 +183,7 @@ export function WellnessHome() {
       </section>
 
       {/* Paquetes */}
-      <section className="bg-[#fbfbfc] py-16" aria-labelledby="home-paquetes">
+      <section className="bg-cream py-16" aria-labelledby="home-paquetes">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
           <h2 id="home-paquetes" className="font-heading text-[30px] font-bold leading-[1.4] text-primary">
             Paquetes de clases
@@ -196,14 +196,14 @@ export function WellnessHome() {
             {paquetes.map((p) => (
               <li
                 key={p.name}
-                className={`flex flex-col rounded-xl border bg-white p-5 ${p.popular ? 'border-primary' : 'border-neutral'}`}
+                className={`flex flex-col rounded-xl border bg-cream-elevated p-5 ${p.popular ? 'border-primary' : 'border-cream-border'}`}
               >
                 {p.popular && (
                   <span className="mb-2 w-fit rounded-full bg-primary px-2 py-0.5 font-body text-xs font-semibold text-white">
                     Más popular
                   </span>
                 )}
-                <h3 className="font-heading text-lg font-semibold text-[#111827]">{p.name}</h3>
+                <h3 className="font-heading text-lg font-semibold text-ink">{p.name}</h3>
                 <p className="mt-2 font-heading text-2xl font-bold text-primary">
                   {formatMxn(p.price)} <span className="text-sm font-normal text-[#6b7280]">MXN</span>
                 </p>
@@ -227,7 +227,7 @@ export function WellnessHome() {
       </section>
 
       {/* Filosofía */}
-      <section className="py-16" aria-labelledby="home-filosofia">
+      <section className="bg-cream-secondary py-16" aria-labelledby="home-filosofia">
         <div className="mx-auto max-w-4xl px-6 text-center lg:px-12">
           <h2 id="home-filosofia" className="font-heading text-[30px] font-bold leading-[1.4] text-primary">
             Nuestra filosofía
@@ -259,15 +259,15 @@ export function WellnessHome() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-[#fbfbfc] py-16" aria-labelledby="home-faq">
+      <section className="bg-cream py-16" aria-labelledby="home-faq">
         <div className="mx-auto max-w-3xl px-6 lg:px-12">
           <h2 id="home-faq" className="font-heading text-[30px] font-bold leading-[1.4] text-primary">
             Preguntas frecuentes sobre las clases
           </h2>
-          <div className="mt-6 divide-y divide-neutral rounded-xl border border-neutral bg-white">
+          <div className="mt-6 divide-y divide-cream-border rounded-xl border border-cream-border bg-cream-elevated">
             {FAQ.map(({ q, a }) => (
               <details key={q} className="group px-5 py-4">
-                <summary className="cursor-pointer font-heading text-base font-semibold text-[#111827]">
+                <summary className="cursor-pointer font-heading text-base font-semibold text-ink">
                   {q}
                 </summary>
                 <p className="mt-2 font-body text-body">{a}</p>

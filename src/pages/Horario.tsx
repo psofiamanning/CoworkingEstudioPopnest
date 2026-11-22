@@ -32,7 +32,7 @@ function buildWeek(): { day: string; rows: Row[] }[] {
 export function Horario() {
   const week = buildWeek()
   return (
-    <main className="bg-[#fbfbfc]">
+    <main className="bg-cream">
       <JsonLd
         data={buildBreadcrumb([
           { name: 'Inicio', path: '/' },
@@ -41,7 +41,7 @@ export function Horario() {
       />
 
       <section className="mx-auto max-w-5xl px-6 pb-8 pt-14 lg:px-12">
-        <h1 className="font-heading text-3xl font-bold text-[#111827] md:text-4xl">
+        <h1 className="font-heading text-3xl font-bold text-ink md:text-4xl">
           Horario de clases en Coyoacán
         </h1>
         <p className="mt-4 max-w-3xl font-body text-base leading-relaxed text-body md:text-lg">
@@ -60,17 +60,17 @@ export function Horario() {
       <section className="mx-auto max-w-5xl px-6 pb-16 lg:px-12">
         <div className="space-y-6">
           {week.map(({ day, rows }) => (
-            <div key={day} className="rounded-xl border border-neutral bg-white">
-              <h2 className="border-b border-neutral px-5 py-3 font-heading text-lg font-semibold text-primary">
+            <div key={day} className="rounded-xl border border-cream-border bg-cream-elevated">
+              <h2 className="border-b border-cream-border px-5 py-3 font-heading text-lg font-semibold text-primary">
                 {day}
               </h2>
-              <ul className="divide-y divide-neutral font-body">
+              <ul className="divide-y divide-cream-border font-body">
                 {rows.map((r) => (
                   <li
                     key={`${r.classId}-${r.time}`}
                     className="flex flex-wrap items-center justify-between gap-2 px-5 py-3"
                   >
-                    <span className="font-semibold text-[#111827]">{r.time} h</span>
+                    <span className="font-semibold text-ink">{r.time} h</span>
                     <Link to={classPath(r.slug)} className="text-primary hover:underline">
                       {r.name}
                     </Link>

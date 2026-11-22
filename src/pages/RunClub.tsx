@@ -106,7 +106,7 @@ export function RunClub() {
   }
 
   return (
-    <main className="bg-[#fbfbfc]">
+    <main className="bg-cream">
       <JsonLd
         data={buildBreadcrumb([
           { name: 'Inicio', path: '/' },
@@ -128,7 +128,7 @@ export function RunClub() {
         <p className="mt-8 font-body text-xs font-semibold uppercase tracking-[0.2em] text-primary">
           Run Club · Coyoacán · Gratis
         </p>
-        <h1 className="mt-3 font-heading text-3xl font-bold text-[#111827] md:text-5xl">
+        <h1 className="mt-3 font-heading text-3xl font-bold text-ink md:text-5xl">
           Run Club en Coyoacán: corre con nosotros, gratis
         </h1>
         <p className="mt-4 max-w-2xl font-body text-base leading-relaxed text-body md:text-lg">
@@ -159,10 +159,10 @@ export function RunClub() {
         <h2 id="rc-horario" className="font-heading text-2xl font-bold text-primary">
           Horario de salidas
         </h2>
-        <dl className="mt-4 divide-y divide-neutral rounded-xl border border-neutral bg-white font-body">
+        <dl className="mt-4 divide-y divide-cream-border rounded-xl border border-cream-border bg-cream-elevated font-body">
           {sessions.map((s) => (
             <div key={s.day} className="flex items-baseline justify-between gap-4 px-5 py-4">
-              <dt className="font-heading text-xl font-bold text-[#111827]">{s.day}</dt>
+              <dt className="font-heading text-xl font-bold text-ink">{s.day}</dt>
               <dd className="text-xl font-bold tabular-nums text-primary">{s.time}</dd>
             </div>
           ))}
@@ -180,9 +180,9 @@ export function RunClub() {
         </p>
         <ol className="mt-6 grid gap-4 md:grid-cols-3">
           {steps.map((step, i) => (
-            <li key={step.title} className="rounded-xl border border-neutral bg-white p-5">
+            <li key={step.title} className="rounded-xl border border-cream-border bg-cream-elevated p-5">
               <span className="font-heading text-3xl font-bold text-primary">{i + 1}</span>
-              <p className="mt-2 font-heading text-lg font-semibold text-[#111827]">{step.title}</p>
+              <p className="mt-2 font-heading text-lg font-semibold text-ink">{step.title}</p>
               <p className="mt-1 font-body text-sm leading-relaxed text-body">{step.text}</p>
             </li>
           ))}
@@ -203,7 +203,7 @@ export function RunClub() {
         <dl className="mt-4 space-y-5 font-body">
           {faqs.map(({ q, a }) => (
             <div key={q}>
-              <dt className="font-semibold text-[#111827]">{q}</dt>
+              <dt className="font-semibold text-ink">{q}</dt>
               <dd className="mt-1 leading-relaxed text-body">{a}</dd>
             </div>
           ))}

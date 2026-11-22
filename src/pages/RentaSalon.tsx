@@ -56,7 +56,7 @@ export function RentaSalon() {
   }
 
   return (
-    <main className="bg-[#fbfbfc]">
+    <main className="bg-cream">
       <JsonLd
         data={buildBreadcrumb([
           { name: 'Inicio', path: '/' },
@@ -74,7 +74,7 @@ export function RentaSalon() {
           <span className="mx-2" aria-hidden>/</span>
           <span aria-current="page">Renta de salón</span>
         </nav>
-        <h1 className="mt-8 font-heading text-3xl font-bold text-[#111827] md:text-5xl">
+        <h1 className="mt-8 font-heading text-3xl font-bold text-ink md:text-5xl">
           Renta de salón en Coyoacán
         </h1>
         <p className="mt-4 max-w-2xl font-body text-base leading-relaxed text-body md:text-lg">
@@ -123,14 +123,14 @@ export function RentaSalon() {
           Precio por hora en pesos mexicanos. Elige el horario y el número de personas; el total se
           calcula al reservar.
         </p>
-        <div className="mt-6 overflow-x-auto rounded-xl border border-neutral bg-white">
+        <div className="mt-6 overflow-x-auto rounded-xl border border-cream-border bg-cream-elevated">
           <table className="w-full min-w-[640px] text-left font-body text-sm">
             <caption className="sr-only">Precio por hora de renta del Salón Coyote</caption>
-            <thead className="border-b border-neutral bg-[#fafafa]">
+            <thead className="border-b border-cream-border bg-cream-secondary">
               <tr>
-                <th scope="col" className="px-4 py-3 font-semibold text-[#111827]">Personas</th>
+                <th scope="col" className="px-4 py-3 font-semibold text-ink">Personas</th>
                 {salonSlotOrder.map((k) => (
-                  <th key={k} scope="col" className="px-4 py-3 font-semibold text-[#111827]">
+                  <th key={k} scope="col" className="px-4 py-3 font-semibold text-ink">
                     {salonSlots[k].label}
                     <span className="block text-xs font-normal text-[#6b7280]">
                       {salonSlots[k].days}, {salonSlots[k].hours}
@@ -139,10 +139,10 @@ export function RentaSalon() {
                 ))}
               </tr>
             </thead>
-            <tbody className="divide-y divide-neutral">
+            <tbody className="divide-y divide-cream-border">
               {salonPriceTiers.map((tier) => (
                 <tr key={tier.people}>
-                  <th scope="row" className="px-4 py-3 font-semibold text-[#111827]">{tier.people}</th>
+                  <th scope="row" className="px-4 py-3 font-semibold text-ink">{tier.people}</th>
                   {salonSlotOrder.map((k) => (
                     <td key={k} className="px-4 py-3 tabular-nums text-body">
                       {money(tier.prices[k])}
@@ -153,7 +153,7 @@ export function RentaSalon() {
             </tbody>
           </table>
         </div>
-        <h3 className="mt-8 font-heading text-lg font-semibold text-[#111827]">Extras</h3>
+        <h3 className="mt-8 font-heading text-lg font-semibold text-ink">Extras</h3>
         <ul className="mt-2 list-disc space-y-1 pl-5 font-body text-body">
           {salonExtras.map((e) => (
             <li key={e.label}>
@@ -173,7 +173,7 @@ export function RentaSalon() {
           {salonUseCases.map((u) => (
             <li
               key={u}
-              className="rounded-full border border-neutral bg-white px-4 py-2 text-sm text-[#111827]"
+              className="rounded-full border border-cream-border bg-cream-elevated px-4 py-2 text-sm text-ink"
             >
               {u}
             </li>

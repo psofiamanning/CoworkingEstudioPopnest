@@ -38,7 +38,7 @@ export function ClaseLanding() {
   const others = classTypes.filter((c) => c.id !== clase.id)
 
   return (
-    <main className="bg-[#fbfbfc]">
+    <main className="bg-cream">
       <JsonLd data={buildBreadcrumb([
           { name: 'Inicio', path: '/' },
           { name: 'Clases', path: '/classes' },
@@ -70,10 +70,10 @@ export function ClaseLanding() {
             alt={`Clase de ${clase.name} en Coyoacán — Estudio Popnest`}
             width={160}
             height={160}
-            className="h-32 w-32 shrink-0 rounded-2xl bg-quaternary/30 object-contain p-3 md:h-40 md:w-40"
+            className="h-32 w-32 shrink-0 rounded-2xl bg-cream-secondary object-contain p-3 md:h-40 md:w-40"
           />
           <div>
-            <h1 className="font-heading text-3xl font-bold text-[#111827] md:text-4xl">
+            <h1 className="font-heading text-3xl font-bold text-ink md:text-4xl">
               {getH1(clase.id)}
             </h1>
             <p className="mt-4 max-w-2xl font-body text-base leading-relaxed text-body md:text-lg">
@@ -101,22 +101,22 @@ export function ClaseLanding() {
       </section>
 
       <section className="mx-auto max-w-5xl px-6 pb-12 lg:px-12">
-        <dl className="grid gap-4 rounded-xl border border-neutral bg-white p-6 font-body text-sm sm:grid-cols-2 lg:grid-cols-4">
+        <dl className="grid gap-4 rounded-xl border border-cream-border bg-cream-elevated p-6 font-body text-sm sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <dt className="text-[#6b7280]">Duración</dt>
-            <dd className="mt-1 font-semibold text-[#111827]">{clase.duration} minutos</dd>
+            <dd className="mt-1 font-semibold text-ink">{clase.duration} minutos</dd>
           </div>
           <div>
             <dt className="text-[#6b7280]">Coach</dt>
-            <dd className="mt-1 font-semibold text-[#111827]">{getTeachersLabel(clase.id)}</dd>
+            <dd className="mt-1 font-semibold text-ink">{getTeachersLabel(clase.id)}</dd>
           </div>
           <div>
             <dt className="text-[#6b7280]">Clase suelta</dt>
-            <dd className="mt-1 font-semibold text-[#111827]">${SINGLE_CLASS_PRICE_MXN} MXN</dd>
+            <dd className="mt-1 font-semibold text-ink">${SINGLE_CLASS_PRICE_MXN} MXN</dd>
           </div>
           <div>
             <dt className="text-[#6b7280]">Dónde</dt>
-            <dd className="mt-1 font-semibold text-[#111827]">Londres 105, Del Carmen, Coyoacán</dd>
+            <dd className="mt-1 font-semibold text-ink">Londres 105, Del Carmen, Coyoacán</dd>
           </div>
         </dl>
       </section>
@@ -132,7 +132,7 @@ export function ClaseLanding() {
         </div>
         {clase.whatToBring && clase.whatToBring.length > 0 && (
           <p className="mt-6 max-w-3xl font-body text-body">
-            <span className="font-semibold text-[#111827]">Qué llevar:</span>{' '}
+            <span className="font-semibold text-ink">Qué llevar:</span>{' '}
             {clase.whatToBring.join(' y ')}.
           </p>
         )}
@@ -142,10 +142,10 @@ export function ClaseLanding() {
         <h2 className="font-heading text-2xl font-bold text-primary">
           Horario de {clase.name} en Coyoacán
         </h2>
-        <ul className="mt-4 divide-y divide-neutral rounded-xl border border-neutral bg-white font-body">
+        <ul className="mt-4 divide-y divide-cream-border rounded-xl border border-cream-border bg-cream-elevated font-body">
           {schedule.map(({ day, slots }) => (
             <li key={day} className="flex flex-wrap items-center justify-between gap-2 px-5 py-3">
-              <span className="font-semibold text-[#111827]">{day}</span>
+              <span className="font-semibold text-ink">{day}</span>
               <span className="text-body">
                 {slots
                   .map((s) => (s.teacher ? `${s.time} h (con ${s.teacher})` : `${s.time} h`))
@@ -170,7 +170,7 @@ export function ClaseLanding() {
           </h2>
           <div className="mt-6 grid gap-6 md:grid-cols-2">
             {teachers.map((t) => (
-              <article key={t.id} className="flex gap-4 rounded-xl border border-neutral bg-white p-5">
+              <article key={t.id} className="flex gap-4 rounded-xl border border-cream-border bg-cream-elevated p-5">
                 {t.image ? (
                   <img
                     src={t.image}
@@ -192,7 +192,7 @@ export function ClaseLanding() {
                   </div>
                 )}
                 <div>
-                  <h3 className="font-heading text-lg font-semibold text-[#111827]">{t.name}</h3>
+                  <h3 className="font-heading text-lg font-semibold text-ink">{t.name}</h3>
                   <p className="font-body text-sm text-primary">{t.specialty}</p>
                   <p className="mt-2 font-body text-sm leading-relaxed text-body">{t.bio}</p>
                 </div>
@@ -208,7 +208,7 @@ export function ClaseLanding() {
           <dl className="mt-4 space-y-5 font-body">
             {faqs.map(({ q, a }) => (
               <div key={q}>
-                <dt className="font-semibold text-[#111827]">{q}</dt>
+                <dt className="font-semibold text-ink">{q}</dt>
                 <dd className="mt-1 leading-relaxed text-body">{a}</dd>
               </div>
             ))}
@@ -216,7 +216,7 @@ export function ClaseLanding() {
         </section>
       )}
 
-      <section className="border-t border-neutral bg-[#fafafa] py-12">
+      <section className="border-t border-cream-border bg-cream-secondary py-12">
         <div className="mx-auto max-w-5xl px-6 lg:px-12">
           <h2 className="font-heading text-2xl font-bold text-primary">Otras clases en Coyoacán</h2>
           <ul className="mt-4 flex flex-wrap gap-3 font-body">
@@ -224,7 +224,7 @@ export function ClaseLanding() {
               <li key={c.id}>
                 <Link
                   to={classPath(slugForClass(c.id))}
-                  className="inline-flex rounded-full border border-neutral bg-white px-4 py-2 text-sm text-[#111827] transition-colors hover:border-primary hover:text-primary"
+                  className="inline-flex rounded-full border border-cream-border bg-cream-elevated px-4 py-2 text-sm text-ink transition-colors hover:border-primary hover:text-primary"
                 >
                   {c.name}
                 </Link>

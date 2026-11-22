@@ -12,7 +12,7 @@ export function Talleres() {
   )
 
   return (
-    <main className="bg-[#fbfbfc]">
+    <main className="bg-cream">
       <JsonLd
         data={buildBreadcrumb([
           { name: 'Inicio', path: '/' },
@@ -29,7 +29,7 @@ export function Talleres() {
           <span className="mx-2" aria-hidden>/</span>
           <span aria-current="page">Talleres</span>
         </nav>
-        <h1 className="mt-8 font-heading text-3xl font-bold text-[#111827] md:text-5xl">
+        <h1 className="mt-8 font-heading text-3xl font-bold text-ink md:text-5xl">
           Talleres y experiencias de bienestar en Coyoacán
         </h1>
         <p className="mt-4 max-w-2xl font-body text-base leading-relaxed text-body md:text-lg">
