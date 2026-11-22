@@ -58,14 +58,25 @@ export function Clases() {
                 to={classPath(slugForClass(c.id))}
                 className="flex h-full gap-4 rounded-xl border border-cream-border bg-cream-elevated p-5 transition-colors hover:border-primary"
               >
-                <img
-                  src={c.image}
-                  alt=""
-                  width={80}
-                  height={80}
-                  loading="lazy"
-                  className="h-20 w-20 shrink-0 rounded-xl bg-cream-secondary object-contain p-2"
-                />
+                {c.photo ? (
+                  <img
+                    src={c.photo}
+                    alt={`Clase de ${c.name} en Estudio Popnest, Coyoacán`}
+                    width={80}
+                    height={80}
+                    loading="lazy"
+                    className="h-20 w-20 shrink-0 rounded-xl object-cover object-[50%_60%]"
+                  />
+                ) : (
+                  <img
+                    src={c.image}
+                    alt=""
+                    width={80}
+                    height={80}
+                    loading="lazy"
+                    className="h-20 w-20 shrink-0 rounded-xl bg-cream-secondary object-contain p-2"
+                  />
+                )}
                 <div>
                   <h2 className="font-heading text-xl font-semibold text-ink">{c.name}</h2>
                   <p className="mt-1 font-body text-sm text-primary">

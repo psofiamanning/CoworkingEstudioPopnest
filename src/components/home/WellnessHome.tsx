@@ -116,14 +116,25 @@ export function WellnessHome() {
                   to={classPath(slugForClass(c.id))}
                   className="flex h-full flex-col overflow-hidden rounded-xl border border-cream-border bg-cream-elevated transition-colors hover:border-primary"
                 >
-                  <img
-                    src={c.image}
-                    alt={`Clase de ${c.name} en Coyoacán, Estudio Popnest`}
-                    width={320}
-                    height={240}
-                    loading="lazy"
-                    className="h-40 w-full bg-cream-secondary object-contain p-4"
-                  />
+                  {c.photo ? (
+                    <img
+                      src={c.photo}
+                      alt={`Clase de ${c.name} en Estudio Popnest, Coyoacán`}
+                      width={320}
+                      height={240}
+                      loading="lazy"
+                      className="h-40 w-full object-cover object-[50%_60%]"
+                    />
+                  ) : (
+                    <img
+                      src={c.image}
+                      alt={`Clase de ${c.name} en Coyoacán, Estudio Popnest`}
+                      width={320}
+                      height={240}
+                      loading="lazy"
+                      className="h-40 w-full bg-cream-secondary object-contain p-4"
+                    />
+                  )}
                   <div className="p-4">
                     <h3 className="font-heading text-lg font-semibold text-ink">{c.name}</h3>
                     <p className="mt-1 font-body text-sm text-body">

@@ -100,6 +100,21 @@ export function ClaseLanding() {
         </div>
       </section>
 
+      {clase.photo && (
+        <section className="mx-auto max-w-5xl px-6 pb-10 lg:px-12" aria-label={`Así se vive la clase de ${clase.name}`}>
+          <figure className="overflow-hidden rounded-2xl">
+            <img
+              src={clase.photo}
+              alt={`Alumnas y coach en clase de ${clase.name} en Estudio Popnest, Coyoacán`}
+              width={1200}
+              height={800}
+              loading="lazy"
+              className="aspect-[4/3] w-full object-cover object-[50%_65%]"
+            />
+          </figure>
+        </section>
+      )}
+
       <section className="mx-auto max-w-5xl px-6 pb-12 lg:px-12">
         <dl className="grid gap-4 rounded-xl border border-cream-border bg-cream-elevated p-6 font-body text-sm sm:grid-cols-2 lg:grid-cols-4">
           <div>
