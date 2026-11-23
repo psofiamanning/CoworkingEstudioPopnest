@@ -62,9 +62,9 @@ export const routeSeo: Record<string, RouteSeo> = {
       'Pase por día de coworking en Del Carmen, Coyoacán (CDMX): $300 MXN, con Wi‑Fi, café, té y agua, impresora y áreas comunes. A pasos del Museo Frida Kahlo.',
   },
   '/salas-de-juntas': {
-    title: 'Salas de juntas en Del Carmen, Coyoacán | Estudio Popnest',
+    title: 'Salas de juntas en renta en Coyoacán desde $400/hora | Estudio Popnest',
     description:
-      'Salas de reuniones por hora en Coyoacán, colonia Del Carmen: distintas capacidades para equipos, espacios equipados y ubicación céntrica cerca del centro histórico del barrio.',
+      'Salas de juntas en renta en Coyoacán, colonia Del Carmen, desde $400 MXN por hora: hasta 10 personas, Wi‑Fi, pantalla, café y reserva en línea. A pasos del Museo Frida Kahlo.',
   },
   '/oficinas-largo-plazo': {
     title: 'Renta de oficinas en Coyoacán: por día y contrato anual | Estudio Popnest',

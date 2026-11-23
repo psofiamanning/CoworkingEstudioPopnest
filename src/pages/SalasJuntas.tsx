@@ -2,6 +2,36 @@ import { rooms } from '../data/rooms'
 import type { Room } from '../data/rooms'
 import { cateringPackages } from '../data/catering'
 import { RoomCard } from '../components/RoomCard'
+import { JsonLd } from '../components/seo/JsonLd'
+import { buildBreadcrumb } from '../lib/schema'
+import { hourlyRoomAmenities } from '../data/rooms'
+
+const FAQS: readonly { q: string; a: string }[] = [
+  {
+    q: '¿Cuánto cuesta rentar una sala de juntas en Estudio Popnest?',
+    a: 'La sala de juntas se renta por hora desde $400 MXN. Incluye Wi‑Fi, pantalla para presentaciones, café, té y agua.',
+  },
+  {
+    q: '¿Para cuántas personas es la sala de juntas?',
+    a: 'La sala Dakota tiene capacidad para hasta 10 personas. Para eventos o talleres más grandes tenemos el Salón Coyote, para hasta 50 personas.',
+  },
+  {
+    q: '¿Cómo reservo una sala de juntas?',
+    a: 'Eliges la sala en esta página y reservas en línea por hora. Si necesitas ayuda, escríbenos por WhatsApp al +52 55 5437 9644.',
+  },
+  {
+    q: '¿Qué incluye la renta de la sala?',
+    a: 'Wi‑Fi de alta velocidad, pantalla para presentaciones, impresora (sujeto a disponibilidad), café, té y agua, acceso a cocina, refrigerador y áreas comunes, y atención en recepción.',
+  },
+  {
+    q: '¿Dónde están y cuál es el horario?',
+    a: 'En Londres 105, colonia Del Carmen, Coyoacán, a pasos del Museo Frida Kahlo. Abrimos de lunes a viernes de 9:00 a 19:00 y sábados de 9:00 a 17:00.',
+  },
+  {
+    q: '¿Puedo pedir café o comida para mi junta?',
+    a: 'Sí. Coordinamos coffee breaks y comidas para reuniones; elige un paquete en la sección de plan de alimentos de esta página.',
+  },
+]
 
 const heroImg = '/images/espacios/sala-mural-sillas-blancas.webp'
 const bottomImg = '/images/espacios/cafeteria-cocina.webp'
@@ -82,6 +112,18 @@ function CateringCard({
 export function SalasJuntas() {
   return (
     <main className="bg-[#fbfbfc] pb-0">
+      <JsonLd data={buildBreadcrumb([{ name: 'Inicio', path: '/' }, { name: 'Salas de juntas', path: '/salas-de-juntas' }])} />
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: FAQS.map((f) => ({
+            '@type': 'Question',
+            name: f.q,
+            acceptedAnswer: { '@type': 'Answer', text: f.a },
+          })),
+        }}
+      />
       <section className="relative flex min-h-[min(55vh,480px)] items-center justify-center overflow-hidden">
         <img
           src={heroImg}
@@ -96,7 +138,8 @@ export function SalasJuntas() {
             Reserva una Sala de Reuniones
           </h1>
           <p className="mt-4 font-body text-base leading-relaxed text-white/95 md:text-lg">
-            Salas equipadas para juntas por hora. Elige la sala según capacidad y disponibilidad.
+            Salas de juntas en renta en Coyoacán, desde $400 MXN por hora. Equipadas, a pasos del
+            Museo Frida Kahlo.
           </p>
         </div>
       </section>
@@ -138,6 +181,25 @@ export function SalasJuntas() {
               <CateringCard key={pkg.id} pkg={pkg} />
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="border-t border-neutral bg-white py-16">
+        <div className="mx-auto max-w-3xl px-6 lg:px-12">
+          <h2 className="font-heading text-[30px] font-bold leading-[1.4] text-primary">
+            Preguntas frecuentes sobre salas de juntas
+          </h2>
+          <dl className="mt-8 space-y-6 font-body text-body">
+            {FAQS.map((f) => (
+              <div key={f.q}>
+                <dt className="font-semibold text-[#1f2937]">{f.q}</dt>
+                <dd className="mt-1 leading-relaxed">{f.a}</dd>
+              </div>
+            ))}
+          </dl>
+          <p className="mt-6 font-body text-sm text-[#6b7280]">
+            Incluido en la renta: {hourlyRoomAmenities.slice(0, 5).join(' ').replace(/\./g, '.')}
+          </p>
         </div>
       </section>
 
