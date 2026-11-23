@@ -7,7 +7,7 @@ export function SobreNosotros() {
         </h1>
         <div className="mt-10 space-y-6 font-body leading-relaxed text-body">
           <p>
-            Estudio Popnest es un espacio de coworking y creatividad en Coyoacán: salas de
+            Estudio Popnest es un espacio de oficinas en renta y creatividad en Coyoacán: salas de
             reuniones, áreas comunes, cafetería y un ambiente pensado para equipos y
             profesionistas independientes.
           </p>

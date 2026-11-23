@@ -36,7 +36,7 @@ function buildWeek(): { day: string; rows: Row[] }[] {
 const FAQ: { q: string; a: string }[] = [
   {
     q: '¿Dónde está el estudio?',
-    a: 'En Londres 105, colonia Del Carmen, Coyoacán, CDMX, a unos pasos del Museo Frida Kahlo. El estudio comparte entrada con galería, cafetería y coworking; el salón de clases está al fondo del inmueble.',
+    a: 'En Londres 105, colonia Del Carmen, Coyoacán, CDMX, a unos pasos del Museo Frida Kahlo. El estudio comparte entrada con galería, cafetería y oficinas; el salón de clases está al fondo del inmueble.',
   },
   {
     q: '¿Qué clases hay en Estudio Popnest?',
@@ -100,7 +100,7 @@ export function WellnessHome() {
           </h2>
           <p className="mx-auto mt-4 max-w-2xl font-body text-lg text-white/90">
             Pilates, yoga, tai chi, sound healing, belly dance y stretching. Sesiones de 60 minutos
-            en grupos reducidos, en el mismo lugar que el coworking.
+            en grupos reducidos, en el mismo lugar que las oficinas.
           </p>
         </div>
       </section>

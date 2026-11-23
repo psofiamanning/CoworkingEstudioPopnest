@@ -48,7 +48,7 @@ export function DualHero() {
   useDeferredVideo(videoRef)
 
   return (
-    <section aria-label="Coworking y clases" className="grid min-h-[min(90vh,820px)] md:grid-cols-2">
+    <section aria-label="Renta de oficinas y clases" className="grid min-h-[min(90vh,820px)] md:grid-cols-2">
       {/* Coworking */}
       <div className="relative flex min-h-[460px] items-center justify-center overflow-hidden">
         <img
@@ -64,14 +64,14 @@ export function DualHero() {
             Estudio Popnest
           </p>
           <h1 className="mt-3 font-heading text-4xl font-bold tracking-tight md:text-5xl">
-            Coworking en Coyoacán
+            Renta de oficinas en Coyoacán
           </h1>
           <p className="mt-3 font-heading text-lg font-medium md:text-xl">
             Privacidad. Diseño. Creatividad.
           </p>
           <p className="mt-5 font-body text-base leading-relaxed text-white/95">
-            Coworking en Coyoacán, a pasos del Museo Frida Kahlo: salas de reuniones, áreas
-            comunes y cafetería para trabajar solo o con tu equipo.
+            Oficinas privadas en renta, a pasos del Museo Frida Kahlo: contratos anuales o por día,
+            con salas de reuniones, áreas comunes y cafetería para tu equipo.
           </p>
           <Link
             to="/oficinas-largo-plazo"

@@ -74,7 +74,7 @@ export function Contacto() {
             Ubicación y cómo llegar
           </h2>
           <p className="mt-3 max-w-3xl font-body text-body">
-            Coworking y salas de reuniones en la colonia Del Carmen, a pasos del Museo Frida Kahlo. Dirección
+            Renta de oficinas y salas de reuniones en la colonia Del Carmen, a pasos del Museo Frida Kahlo. Dirección
             completa, mapa y orientación para visitarnos.
           </p>
 
