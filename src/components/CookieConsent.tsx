@@ -2,6 +2,7 @@ import {
   createContext,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
   useState,
   useSyncExternalStore,
@@ -13,6 +14,7 @@ import {
   getStoredCookieConsent,
   saveCookieConsent,
 } from '../lib/cookieConsent'
+import { startAnalytics } from '../lib/analytics'
 
 type CookieConsentContextValue = {
   /** `true` mientras el usuario no ha guardado una elección en este dispositivo. */
@@ -45,6 +47,12 @@ export function CookieConsentProvider({ children }: { children: ReactNode }) {
   const preferences = chosen ?? stored
 
   const showBanner = ready && preferences === null
+  const analyticsOn = preferences?.analytics === true
+
+  // GA4 solo se carga con consentimiento explícito ("Aceptar todas").
+  useEffect(() => {
+    if (analyticsOn) startAnalytics()
+  }, [analyticsOn])
 
   const acceptAll = useCallback(() => {
     const next: CookiePreferences = { necessary: true, analytics: true }
@@ -92,9 +100,9 @@ function CookieConsentBanner({
       <div className="mx-auto flex max-w-7xl flex-col gap-4 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
         <div className="min-w-0 font-body text-sm leading-relaxed text-[#374151]">
           <p>
-            Usamos cookies necesarias para que el sitio funcione correctamente. Si en el futuro
-            incorporamos medición de audiencia, solo se activará si lo autorizas. Puedes leer más en
-            nuestro{' '}
+            Usamos cookies necesarias para que el sitio funcione correctamente. Con tu autorización
+            también usamos Google Analytics para medir visitas y clics (por ejemplo, en reservar o
+            en WhatsApp). Puedes leer más en nuestro{' '}
             <Link to="/privacidad" className="font-semibold text-primary underline hover:no-underline">
               aviso de privacidad
             </Link>
