@@ -53,11 +53,9 @@ export function SiteFooter() {
               Londres 105, Col. Del Carmen, Coyoacán, CDMX
             </a>
           </p>
-          <p className="mt-2">
-            Horario: Lun 8:30–20:30 · Mar y Jue 8:30–21:30 · Mié 6:30–21:30 · Vie 8:30–19:00 · Sáb 7:30–11:30 · Dom 8:00–11:30
-          </p>
-          <p className="mt-1 text-xs opacity-80">
-            Sábado y domingo solo con clases, Run Club o talleres.
+          <p className="mt-2">Coworking: Lun a Vie 9:00–19:00 · Sáb y Dom 9:00–17:00</p>
+          <p className="mt-1">
+            Clases y Run Club: ver <Link to="/horario" className="underline underline-offset-2">horario</Link>
           </p>
         </div>
         <div className="font-body text-sm">
