@@ -6,7 +6,7 @@ import { contactFaq } from '../data/contactFaq'
 import { getGoogleMapsEmbedSrc } from '../lib/googleMapsEmbed'
 import { buildWhatsAppUrl } from '../lib/whatsapp'
 
-const heroImg = '/images/contact/hero-pasillo.png'
+const heroImg = '/images/contact/hero-pasillo.webp'
 
 const addressLines = [
   business.streetAddress,

@@ -11,6 +11,7 @@ import {
   getScheduleLines,
   getTeachersLabel,
   slugForClass,
+  thumbOf,
 } from '../../lib/clases'
 
 type Row = { time: string; name: string; slug: string }
@@ -119,7 +120,7 @@ export function WellnessHome() {
                 >
                   {c.photo ? (
                     <img
-                      src={c.photo}
+                      src={thumbOf(c.photo)}
                       alt={`Clase de ${c.name} en Estudio Popnest, Coyoacán`}
                       width={320}
                       height={240}
