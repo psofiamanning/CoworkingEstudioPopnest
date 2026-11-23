@@ -97,7 +97,7 @@ export function OficinasLargoPlazo() {
               to="/planes"
               className="inline-flex items-center justify-center rounded-full border border-white/60 px-7 py-3 font-body text-sm font-semibold tracking-wide text-white transition-colors hover:border-white hover:bg-white/10"
             >
-              Planes individuales
+              Pase por día
             </Link>
           </div>
         </div>
@@ -162,7 +162,7 @@ export function OficinasLargoPlazo() {
                   to="/planes"
                   className="inline-flex items-center justify-center rounded-full border border-neutral px-8 py-3.5 font-body text-sm font-semibold tracking-wide text-[#1f2937] transition-colors hover:border-primary/40 hover:text-primary"
                 >
-                  Ver planes de coworking
+                  Ver pase por día
                 </Link>
               </div>
 
@@ -330,7 +330,7 @@ export function OficinasLargoPlazo() {
         <p className="mt-8 font-body text-sm text-[#6b7280]">
           También puedes revisar{' '}
           <Link to="/planes" className="font-semibold text-primary hover:underline">
-            planes de coworking
+            pase por día de coworking
           </Link>{' '}
           si buscas acceso flexible sin oficina fija.
         </p>

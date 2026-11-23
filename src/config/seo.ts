@@ -10,7 +10,7 @@ export const business = {
   name: 'Estudio Popnest',
   legalName: 'Estudio Popnest',
   description:
-    'Coworking, salas de juntas y clases de Pilates, yoga y bienestar en la colonia Del Carmen, Coyoacán (Ciudad de México): membresías, pase por día, café y terraza, cerca del Museo Frida Kahlo.',
+    'Coworking, salas de juntas y clases de Pilates, yoga y bienestar en la colonia Del Carmen, Coyoacán (Ciudad de México): pase por día, café y terraza, cerca del Museo Frida Kahlo.',
   streetAddress: 'Londres 105',
   addressLocality: 'Coyoacán',
   addressRegion: 'Ciudad de México',
@@ -57,9 +57,9 @@ export const routeSeo: Record<string, RouteSeo> = {
       'Horario semanal de Pilates, yoga, Tai Chi, Sound Healing, Belly Dance y Stretching en Estudio Popnest, Londres 105, Del Carmen, Coyoacán. Reserva tu lugar en línea.',
   },
   '/planes': {
-    title: 'Membresías y pase por día en Coyoacán | Estudio Popnest',
+    title: 'Coworking en Coyoacán: pase por día $300 | Estudio Popnest',
     description:
-      'Planes para usar nuestro coworking en Del Carmen, Coyoacán (CDMX): pase por día, mensual y paquetes de varios días. Elige el acceso que encaje con tu forma de trabajar.',
+      'Pase por día de coworking en Del Carmen, Coyoacán (CDMX): $300 MXN, con Wi‑Fi, café, té y agua, impresora y áreas comunes. A pasos del Museo Frida Kahlo.',
   },
   '/salas-de-juntas': {
     title: 'Salas de juntas en Del Carmen, Coyoacán | Estudio Popnest',

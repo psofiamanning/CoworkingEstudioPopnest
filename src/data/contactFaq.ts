@@ -18,9 +18,9 @@ export const contactFaq: readonly FaqItem[] = [
       'De lunes a viernes de 9:00 a 19:00 y sábados de 9:00 a 17:00. Domingo cerrado.',
   },
   {
-    question: '¿Cómo contrato un plan o reservo una sala?',
+    question: '¿Cómo compro un pase por día o reservo una sala?',
     answer:
-      'En este sitio encontrarás la sección Planes y membresías y la sección Salas de juntas con detalles y enlaces. Para dudas o acompañamiento, también por WhatsApp o correo electrónico.',
+      'En este sitio encontrarás la sección Coworking (pase por día) y la sección Salas de juntas con detalles y enlaces. Para dudas o acompañamiento, también por WhatsApp o correo electrónico.',
     showPlanLinks: true,
   },
   {
