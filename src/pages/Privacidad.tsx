@@ -12,7 +12,7 @@ export function Privacidad() {
           <h2 className="font-heading text-xl font-semibold text-[#1f2937]">Cookies y preferencias</h2>
           <p>
             Este sitio utiliza cookies y almacenamiento local para recordar tu elección sobre cookies
-            (necesarias y, si las aceptas, analíticas en el futuro). Puedes cambiar de opinión borrando
+            (necesarias y, si las aceptas, analíticas de Google Analytics para medir visitas y clics en el sitio). Puedes cambiar de opinión borrando
             los datos del sitio en tu navegador o contactándonos. El aviso en pantalla al entrar recoge
             tu consentimiento según corresponda.
           </p>
