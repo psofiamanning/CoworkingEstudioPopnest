@@ -112,7 +112,7 @@ export const classTypes: ClassType[] = [
   },
   {
     "id": "pilates",
-    "name": "Pilates",
+    "name": "Pilates mat",
     "teacher": "Blanca Bear",
     "teacherId": 1,
     "duration": 60,
@@ -375,7 +375,7 @@ export const landingSeoDescription: Record<ClassId, string> = {
 
 export const landingH1: Record<ClassId, string> = {
   "hatha-yoga": "Hatha Yoga en Coyoacán",
-  "pilates": "Pilates en Coyoacán",
+  "pilates": "Pilates mat en Coyoacán",
   "sound-healing": "Sound Healing en Coyoacán",
   "power-yoga-1": "Power Yoga en Coyoacán",
   "tai-chi": "Tai Chi en Coyoacán",
@@ -410,7 +410,7 @@ export const landingInstructors: Record<ClassId, string[]> = {
 
 export const landingClassName: Record<ClassId, string> = {
   "hatha-yoga": "Hatha Yoga",
-  "pilates": "Pilates",
+  "pilates": "Pilates mat",
   "sound-healing": "Sound Healing",
   "power-yoga-1": "Power Yoga",
   "tai-chi": "Tai Chi",
@@ -449,6 +449,22 @@ export const landingFaq: Record<ClassId, Faq[]> = {
     {
       "q": "¿Qué debo llevar?",
       "a": "Ropa cómoda y tu propio mat de yoga. Si tienes dudas antes de tu primera clase, escríbenos."
+    },
+    {
+      "q": "¿Cuánto cuesta una clase de Pilates mat en Coyoacán?",
+      "a": "La clase suelta cuesta $250 MXN. Hay paquetes desde $550 MXN por 3 clases (Descubre Popnest) y un plan Ilimitado mensual de $1,800 MXN, válidos para todas las clases del estudio. Los precios vigentes están en Fitune."
+    },
+    {
+      "q": "¿Cómo reservo mi clase de Pilates mat?",
+      "a": "Las reservaciones y las compras de clases y paquetes se hacen únicamente en Fitune. Elige tu horario en el calendario y reserva tu lugar en línea."
+    },
+    {
+      "q": "¿Pilates mat y yoga son lo mismo?",
+      "a": "No. Pilates mat se enfoca en el control del centro del cuerpo (core), la alineación y la precisión del movimiento en colchoneta. El yoga integra posturas, respiración y atención plena. En Estudio Popnest tenemos ambas, así que puedes combinarlas con un mismo paquete."
+    },
+    {
+      "q": "¿Dónde está el estudio de Pilates en Coyoacán?",
+      "a": "En Londres 105, colonia Del Carmen, Coyoacán, Ciudad de México, a unos pasos del Museo Frida Kahlo."
     }
   ],
   "sound-healing": [
