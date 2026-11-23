@@ -56,9 +56,11 @@ export function RoomCard({ room }: { room: Room }) {
               {room.name}
             </h2>
             <div className="mt-3 flex flex-wrap items-center gap-2">
-              <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary ring-1 ring-primary/15">
-                {room.priceLabel}
-              </span>
+              {room.status !== 'unavailable_office' && (
+                <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary ring-1 ring-primary/15">
+                  {room.priceLabel}
+                </span>
+              )}
               <span className="rounded-full bg-neutral/90 px-3 py-1 text-xs font-semibold text-[#374151] ring-1 ring-neutral/70">
                 {room.capacityLabel}
               </span>
