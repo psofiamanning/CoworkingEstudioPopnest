@@ -19,6 +19,15 @@ export const business = {
   /** Coordenadas aproximadas (Col. Del Carmen) para SEO local / mapas */
   geo: { latitude: 19.3495, longitude: -99.1628 },
   telephoneInternational: '+525554379644',
+  /** Horario por día: de la primera actividad (clase o Run Club) al fin de la última clase. Sáb/Dom solo con actividades. */
+  hours: [
+    { days: ['Monday'], opens: '08:30', closes: '20:30' },
+    { days: ['Tuesday', 'Thursday'], opens: '08:30', closes: '21:30' },
+    { days: ['Wednesday'], opens: '06:30', closes: '21:30' },
+    { days: ['Friday'], opens: '08:30', closes: '19:00' },
+    { days: ['Saturday'], opens: '07:30', closes: '11:30' },
+    { days: ['Sunday'], opens: '08:00', closes: '11:30' },
+  ],
   email: 'info@estudiopopnest.com',
   /** Imagen OG por defecto (ruta bajo public/) */
   defaultOgImagePath: '/images/home/hero-sala.png',
