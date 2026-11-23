@@ -8,6 +8,7 @@ import {
   getScheduleSummary,
   getTeachersLabel,
   slugForClass,
+  thumbOf,
 } from '../lib/clases'
 import { buildBreadcrumb } from '../lib/schema'
 import { formatMxn, paquetes } from '../data/paquetes'
@@ -26,6 +27,8 @@ export function Clases() {
       <section className="relative flex min-h-[min(80vh,640px)] items-end overflow-hidden">
         <img
           src="/images/clases/pilates-clase.webp"
+          srcSet="/images/clases/pilates-clase-960.webp 960w, /images/clases/pilates-clase.webp 1200w"
+          sizes="100vw"
           alt="Clase de Pilates mat en Estudio Popnest, Coyoacán"
           width={1600}
           height={1066}
@@ -83,7 +86,7 @@ export function Clases() {
               >
                 {c.photo ? (
                   <img
-                    src={c.photo}
+                    src={thumbOf(c.photo)}
                     alt={`Clase de ${c.name} en Estudio Popnest, Coyoacán`}
                     width={80}
                     height={80}

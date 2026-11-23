@@ -5,9 +5,9 @@ import { officeDayRentals } from '../data/officeDayRentals'
 import type { OfficeDayRental } from '../data/officeDayRentals'
 import { hourlyRoomAmenities } from '../data/rooms'
 
-const heroImg = '/images/espacios/sala-mural-sillas-blancas.png'
+const heroImg = '/images/espacios/sala-mural-sillas-blancas.webp'
 /** Oficina privada (sala Dakota) que se renta por día y medio día. */
-const officeImg = '/images/espacios/sala-dakota.png'
+const officeImg = '/images/espacios/sala-dakota.webp'
 
 /** Anclas para los botones de navegación interna de la página. */
 const dayRatesId = 'oficina-por-dia'

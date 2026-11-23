@@ -16,7 +16,7 @@ export function SiteFooter() {
             aria-label="Estudio Popnest — inicio"
           >
             <img
-              src="/favicon.svg"
+              src="/logo-popnest.webp"
               alt=""
               width={48}
               height={46}

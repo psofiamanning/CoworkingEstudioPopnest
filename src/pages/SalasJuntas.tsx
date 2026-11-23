@@ -3,8 +3,8 @@ import type { Room } from '../data/rooms'
 import { cateringPackages } from '../data/catering'
 import { RoomCard } from '../components/RoomCard'
 
-const heroImg = '/images/espacios/sala-mural-sillas-blancas.png'
-const bottomImg = '/images/espacios/cafeteria-cocina.png'
+const heroImg = '/images/espacios/sala-mural-sillas-blancas.webp'
+const bottomImg = '/images/espacios/cafeteria-cocina.webp'
 
 function ComingSoonCard() {
   return (

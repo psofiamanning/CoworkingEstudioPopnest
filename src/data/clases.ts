@@ -104,7 +104,7 @@ export const classTypes: ClassType[] = [
     "duration": 60,
     "description": "Práctica tradicional de Hatha Yoga en Coyoacán para equilibrar cuerpo y mente con posturas, respiración y atención consciente.",
     "fullDescription": "Hatha Yoga es una práctica clásica que integra posturas sostenidas, respiración consciente y pausas de atención para fortalecer el cuerpo y calmar la mente. El ritmo es claro y accesible, ideal para construir base técnica y presencia.\n\nPuedes esperar una secuencia progresiva con movilidad suave, trabajo de alineación, respiración guiada y cierre de relajación. Es una práctica equilibrada para cultivar estabilidad, flexibilidad y enfoque.",
-    "image": "/images/clases/hatha-yoga.png",
+    "image": "/images/clases/hatha-yoga.webp",
     "photo": "/images/clases/hatha-yoga-clase.webp",
     "whatToBring": [
       "tu propio mat de yoga"
@@ -112,13 +112,13 @@ export const classTypes: ClassType[] = [
   },
   {
     "id": "pilates",
-    "name": "Pilates",
+    "name": "Pilates mat",
     "teacher": "Blanca Bear",
     "teacherId": 1,
     "duration": 60,
     "description": "Clase de Pilates mat en Coyoacán, en colchoneta y con máximo 10 personas, enfocada en core, alineación y control del movimiento. Ideal para fortalecer el centro del cuerpo, mejorar postura y ganar estabilidad con guía experta.",
     "fullDescription": "Nuestra clase es de Pilates mat (en colchoneta, sin reformer). Trabajamos desde los principios del método: respiración, precisión y fluidez, en grupos de máximo 10 personas donde la coach corrige la técnica de cada persona. La clase integra ejercicios en colchoneta y opciones progresivas para distintos niveles, con atención a la columna y la pelvis.\n\nPuedes esperar calentamiento articular, series de fortalecimiento del abdomen y espalda, y cierre con estiramientos. Es una práctica clara y contenida, pensada para sentir el cuerpo con más consciencia y sin prisa.",
-    "image": "/images/clases/pilates.png",
+    "image": "/images/clases/pilates.webp",
     "photo": "/images/clases/pilates-clase.webp",
     "whatToBring": [
       "tu propio mat de yoga"
@@ -132,7 +132,7 @@ export const classTypes: ClassType[] = [
     "duration": 60,
     "description": "Arte marcial suave y meditativo que integra movimientos fluidos, técnicas de respiración consciente y principios de meditación. Practica Tai Chi en Coyoacán para mejorar equilibrio y bienestar integral.",
     "fullDescription": "El Tai Chi es un arte marcial interno chino que combina movimientos lentos, fluidos y circulares con respiración profunda y meditación en movimiento. Esta práctica milenaria se realiza de pie, ejecutando secuencias de movimientos que fluyen como una danza suave y continua.\n\nDurante la clase, aprenderás formas tradicionales que conectan cuerpo, mente y espíritu en un movimiento armonioso. Puedes esperar una práctica accesible para todos los niveles, donde cada movimiento se enseña paso a paso, permitiendo que desarrolles coordinación, equilibrio y conciencia corporal.\n\nEl Tai Chi mejora significativamente el equilibrio y reduce el riesgo de caídas, aumenta la flexibilidad y rango de movimiento, fortalece las piernas y el core, reduce el estrés y la ansiedad, mejora la concentración y claridad mental, fortalece el sistema cardiovascular de manera suave, alivia dolores articulares y musculares, promueve la circulación sanguínea y linfática, y desarrolla la coordinación y agilidad, ofreciendo beneficios tanto físicos como mentales para personas de todas las edades.",
-    "image": "/images/clases/tai-chi.png",
+    "image": "/images/clases/tai-chi.webp",
     "photo": "/images/clases/tai-chi-clase.webp"
   },
   {
@@ -143,7 +143,7 @@ export const classTypes: ClassType[] = [
     "duration": 60,
     "description": "Clase dinámica en Coyoacán que combina fuerza, resistencia y alineación en secuencias exigentes y claras, ideal para quien busca profundizar en posturas y energía atlética con guía experta.",
     "fullDescription": "Power Yoga es una práctica vigorosa en la que el calor y el ritmo sostienen secuencias fluidas entre posturas de pie, equilibrios y trabajo de fuerza. Rocío integra su experiencia en yoga deportivo y preparación física para ofrecer una clase desafiante y ordenada, con atención al detalle y opciones para distintos niveles.\n\nPuedes esperar calentamiento activo, series que desarrollan resistencia y estabilidad, y un cierre que devuelve el cuerpo a la calma. Es una propuesta para quien disfruta del movimiento intenso sin perder la consciencia respiratoria y la integridad articular.",
-    "image": "/images/clases/power-yoga.png",
+    "image": "/images/clases/power-yoga.webp",
     "photo": "/images/clases/power-yoga-clase.webp",
     "whatToBring": [
       "tu propio mat de yoga"
@@ -157,7 +157,7 @@ export const classTypes: ClassType[] = [
     "duration": 60,
     "description": "Experiencia de sanación sonora en Coyoacán que utiliza cuencos tibetanos, gongs y vibraciones terapéuticas para facilitar relajación profunda, reducir ansiedad y promover equilibrio energético.",
     "fullDescription": "El Sound Healing o Sanación Sonora es una terapia vibracional que utiliza instrumentos ancestrales como cuencos tibetanos, gongs, campanas, diapasones y la voz para crear frecuencias curativas que resuenan con el cuerpo y la mente.\n\nDurante la sesión, te recostarás cómodamente mientras te envuelves en un baño de sonidos que penetran profundamente en tus células y tejidos. La experiencia es completamente pasiva, permitiendo que el cuerpo entre en un estado de relajación profunda mientras las vibraciones trabajan a nivel celular.\n\nPuedes esperar una experiencia transformadora donde los sonidos te guían hacia estados de conciencia expandida, liberando tensiones físicas y emocionales almacenadas.\n\nEl Sound Healing reduce significativamente el estrés y la ansiedad, mejora la calidad del sueño, equilibra el sistema nervioso, libera bloqueos emocionales y traumas almacenados, reduce el dolor crónico y la inflamación, mejora la concentración y claridad mental, promueve la producción de ondas cerebrales alfa y theta asociadas con la relajación profunda, fortalece el sistema inmunológico, y facilita estados meditativos profundos, proporcionando una experiencia de sanación holística que integra cuerpo, mente y espíritu.",
-    "image": "/images/clases/sound-healing.png",
+    "image": "/images/clases/sound-healing.webp",
     "photo": "/images/clases/sound-healing-clase.webp",
     "whatToBring": [
       "tu propio mat de yoga",
@@ -172,7 +172,7 @@ export const classTypes: ClassType[] = [
     "duration": 60,
     "description": "Clase de danza árabe en Coyoacán que combina técnica, coordinación y expresión corporal. Fortalece el cuerpo, mejora la postura y reconecta con tu confianza. No necesitas experiencia previa.",
     "fullDescription": "La clase de Belly Dance es una práctica de danza árabe que combina técnica, coordinación y expresión corporal. A través de movimientos fluidos y dinámicos, fortalecerás el cuerpo, mejorarás tu postura y conectarás con tu confianza y feminidad.\n\nCada sesión integra calentamiento, trabajo de aislamientos y desplazamientos, y una secuencia final para disfrutar el movimiento. No necesitas experiencia previa: la práctica se adapta a todos los niveles.",
-    "image": "/images/clases/belly-dance.png",
+    "image": "/images/clases/belly-dance.webp",
     "photo": "/images/clases/belly-dance-clase.webp"
   },
   {
@@ -183,7 +183,7 @@ export const classTypes: ClassType[] = [
     "duration": 60,
     "description": "Clase de estiramiento en Coyoacán para mejorar flexibilidad, movilidad y postura mediante estiramientos conscientes y progresivos. Apta para todos los niveles.",
     "fullDescription": "Stretching es una clase enfocada en mejorar la flexibilidad, la movilidad y la postura mediante estiramientos conscientes y progresivos. Libera la tensión acumulada, amplía tu rango de movimiento y disfruta una sensación de ligereza y bienestar.\n\nLa sesión avanza de forma gradual, con respiración guiada y opciones para cada cuerpo. Es una práctica apta para todos los niveles, ideal para complementar tu entrenamiento o para tus días de recuperación.",
-    "image": "/images/clases/stretching.png",
+    "image": "/images/clases/stretching.webp",
     "photo": "/images/clases/stretching-clase.webp",
     "whatToBring": [
       "tu propio mat de yoga"
@@ -375,7 +375,7 @@ export const landingSeoDescription: Record<ClassId, string> = {
 
 export const landingH1: Record<ClassId, string> = {
   "hatha-yoga": "Hatha Yoga en Coyoacán",
-  "pilates": "Pilates en Coyoacán",
+  "pilates": "Pilates mat en Coyoacán",
   "sound-healing": "Sound Healing en Coyoacán",
   "power-yoga-1": "Power Yoga en Coyoacán",
   "tai-chi": "Tai Chi en Coyoacán",
@@ -410,7 +410,7 @@ export const landingInstructors: Record<ClassId, string[]> = {
 
 export const landingClassName: Record<ClassId, string> = {
   "hatha-yoga": "Hatha Yoga",
-  "pilates": "Pilates",
+  "pilates": "Pilates mat",
   "sound-healing": "Sound Healing",
   "power-yoga-1": "Power Yoga",
   "tai-chi": "Tai Chi",
@@ -449,6 +449,22 @@ export const landingFaq: Record<ClassId, Faq[]> = {
     {
       "q": "¿Qué debo llevar?",
       "a": "Ropa cómoda y tu propio mat de yoga. Si tienes dudas antes de tu primera clase, escríbenos."
+    },
+    {
+      "q": "¿Cuánto cuesta una clase de Pilates mat en Coyoacán?",
+      "a": "La clase suelta cuesta $250 MXN. Hay paquetes desde $550 MXN por 3 clases (Descubre Popnest) y un plan Ilimitado mensual de $1,800 MXN, válidos para todas las clases del estudio. Los precios vigentes están en Fitune."
+    },
+    {
+      "q": "¿Cómo reservo mi clase de Pilates mat?",
+      "a": "Las reservaciones y las compras de clases y paquetes se hacen únicamente en Fitune. Elige tu horario en el calendario y reserva tu lugar en línea."
+    },
+    {
+      "q": "¿Pilates mat y yoga son lo mismo?",
+      "a": "No. Pilates mat se enfoca en el control del centro del cuerpo (core), la alineación y la precisión del movimiento en colchoneta. El yoga integra posturas, respiración y atención plena. En Estudio Popnest tenemos ambas, así que puedes combinarlas con un mismo paquete."
+    },
+    {
+      "q": "¿Dónde está el estudio de Pilates en Coyoacán?",
+      "a": "En Londres 105, colonia Del Carmen, Coyoacán, Ciudad de México, a unos pasos del Museo Frida Kahlo."
     }
   ],
   "sound-healing": [
