@@ -3,7 +3,7 @@ import { business, getSiteOrigin } from '../../config/seo'
 import { site } from '../../config/site'
 
 /**
- * Datos estructurados CoworkingSpace + LocalBusiness (Schema.org) para Google Rich Results
+ * Datos estructurados CoworkingSpace + HealthClub (estudio de Pilates y yoga) + LocalBusiness (Schema.org) para Google Rich Results
  * y coherencia con ficha de negocio: dirección, teléfono, horario, URL, mapa.
  *
  * Validar en: https://search.google.com/test/rich-results (pegar URL publicada o fragmento HTML).
@@ -31,7 +31,7 @@ export function JsonLdLocalBusiness() {
       '@context': 'https://schema.org',
       '@graph': [
         {
-          '@type': ['CoworkingSpace', 'LocalBusiness'],
+          '@type': ['CoworkingSpace', 'HealthClub', 'LocalBusiness'],
           '@id': `${origin}/#business`,
           name: business.name,
           legalName: business.legalName,
@@ -58,20 +58,12 @@ export function JsonLdLocalBusiness() {
             latitude: business.geo.latitude,
             longitude: business.geo.longitude,
           },
-          openingHoursSpecification: [
-            {
-              '@type': 'OpeningHoursSpecification',
-              dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-              opens: '09:00',
-              closes: '19:00',
-            },
-            {
-              '@type': 'OpeningHoursSpecification',
-              dayOfWeek: 'Saturday',
-              opens: '09:00',
-              closes: '17:00',
-            },
-          ],
+          openingHoursSpecification: business.hours.map((h) => ({
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: h.days,
+            opens: h.opens,
+            closes: h.closes,
+          })),
           contactPoint: [
             {
               '@type': 'ContactPoint',

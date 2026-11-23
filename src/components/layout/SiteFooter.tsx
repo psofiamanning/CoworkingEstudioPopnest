@@ -53,7 +53,10 @@ export function SiteFooter() {
               Londres 105, Col. Del Carmen, Coyoacán, CDMX
             </a>
           </p>
-          <p className="mt-2">Horario: Lun a Vie 9am–7pm, Sáb 9am–5pm</p>
+          <p className="mt-2">Coworking: Lun a Vie 9:00–19:00 · Sáb y Dom 9:00–17:00</p>
+          <p className="mt-1">
+            Clases y Run Club: ver <Link to="/horario" className="underline underline-offset-2">horario</Link>
+          </p>
         </div>
         <div className="font-body text-sm">
           <ul className="space-y-2">
