@@ -61,10 +61,10 @@ export function DualHero() {
         <div className="absolute inset-0 bg-black/45" aria-hidden />
         <div className="relative z-10 max-w-md px-6 py-16 text-center text-white">
           <p className="font-body text-xs font-semibold uppercase tracking-[0.25em] text-white/80">
-            Coworking
+            Estudio Popnest
           </p>
           <h1 className="mt-3 font-heading text-4xl font-bold tracking-tight md:text-5xl">
-            Estudio Popnest
+            Coworking en Coyoacán
           </h1>
           <p className="mt-3 font-heading text-lg font-medium md:text-xl">
             Privacidad. Diseño. Creatividad.
@@ -110,11 +110,11 @@ export function DualHero() {
             Wellness
           </p>
           <h2 className="mt-3 font-heading text-4xl font-bold tracking-tight md:text-5xl">
-            Tu pausa diaria en Coyoacán.
+            Pilates y yoga en Coyoacán
           </h2>
           <p className="mt-5 font-body text-base leading-relaxed text-white/95">
-            Clases de pilates, yoga, tai chi, sound bath y belly dance para bajar el ritmo, todos
-            los días.
+            Tu pausa diaria: clases de Pilates mat, yoga, tai chi, sound bath y belly dance para
+            bajar el ritmo, todos los días.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <a
