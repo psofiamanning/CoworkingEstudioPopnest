@@ -186,7 +186,7 @@ export function Contacto() {
                     {item.showPlanLinks ? (
                       <p className="mt-4 text-sm">
                         <Link to="/planes" className="font-semibold text-primary hover:underline">
-                          Ver planes y membresías
+                          Ver pase por día
                         </Link>
                         {' · '}
                         <Link to="/salas-de-juntas" className="font-semibold text-primary hover:underline">

@@ -47,7 +47,7 @@ export const plans: PlanItem[] = [
         'Si no conoces un coworking: es un espacio compartido donde puedes trabajar con tu laptop, con internet y servicios comunes, sin rentar una oficina fija ni un contrato largo. El Day Pass te da acceso completo a nuestro espacio por un día.',
       ],
       includes: [
-        'Acceso de 9:00 a 19:00 h (lun–vie) y de 10:00 a 17:00 h (sáb–dom).',
+        'Acceso de 9:00 a 19:00 h (lun–vie) y de 9:00 a 17:00 h (sáb–dom).',
         'Escritorio flexible (hot desk) en zona compartida.',
         'Wi‑Fi de alta velocidad.',
         'Uso de impresora (sujeto a disponibilidad).',
@@ -60,38 +60,5 @@ export const plans: PlanItem[] = [
     },
     purchaseUrl:
       'https://archieapp.co/estudio-popnest-1/public/store/day-passes/d802e120-96c3-5740-a8af-c949dcb05a5f',
-  },
-  {
-    id: 'plan-mensual',
-    title: 'Plan Mensual',
-    priceLine: '$4,800 | Individual',
-    videoSrc: '/videos/plan-mensual.mp4',
-    poster: '/videos/F0FAA4A2-C3C0-45C3-A708-28D4513B47FF_1_105_c.jpeg',
-    shortNote:
-      'Para ingresar, solo presenta tu pase de confirmación de pago a tu llegada.',
-    description:
-      'Un espacio sereno y luminoso para trabajar a tu ritmo, con acceso 24/7, mesas compartidas, café, té y agua de cortesía, cocina equipada, terraza arbolada, locker personal y atención en recepción.',
-    purchaseUrl:
-      'https://archieapp.co/estudio-popnest-1/public/store/plans/fb9abf3c-2f55-5304-af29-a6b8a59aae64?filters=U2FsdGVkX1%252BdRJN03H0KzJs87In6x9Xe9kWA23CoIAwhxDG6nVsbq8DmJRwP2Has9AJ3krgo52ckqVoD6aqWiq5Zk%252BSwytQfKORaGa1rQ%252B8%253D',
-  },
-  {
-    id: 'paquete-5',
-    title: 'Paquete 5 días',
-    priceLine: '$1,350 | por mes | Individual',
-    shortNote: '',
-    description:
-      'Cinco días al mes para usar cuando los necesites. Ideal si tu ritmo cambia semana a semana.',
-    purchaseUrl:
-      'https://archieapp.co/estudio-popnest-1/public/store/plans/58569aed-bebb-53fb-8631-7d5fea2e3ad1?filters=U2FsdGVkX19lBBFe7FfMuLRRq6ICS2UkLSLBv6x2XGpFhLbPcoQIM3Ub5OsqPvP0rZ3AUezyNDMJyhngQedzUHOP5NEB2qnXMq8xHegeAnU%253D',
-  },
-  {
-    id: 'paquete-10',
-    title: 'Paquete 10 días',
-    priceLine: '$2,700 | por mes | Individual',
-    shortNote: '',
-    description:
-      'Diez días al mes con la misma flexibilidad: distribuye tus visitas según tu calendario.',
-    purchaseUrl:
-      'https://archieapp.co/estudio-popnest-1/public/store/plans/b05156cc-ae03-52d9-abad-3191cfbcfae3?filters=U2FsdGVkX1%252F8vvAp%252F%252BP0ulm4XoAQb2Pf5q8cAHlMb74VYIpRQoxUiAnqchZTHCbzjlFqUxaRjp5URbylntN3m1p3tY6o5beS8lq7e7swzo4%253D',
   },
 ]
