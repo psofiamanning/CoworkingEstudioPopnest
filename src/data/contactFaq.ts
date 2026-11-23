@@ -20,7 +20,7 @@ export const contactFaq: readonly FaqItem[] = [
   {
     question: '¿Cómo compro un pase por día o reservo una sala?',
     answer:
-      'En este sitio encontrarás la sección Coworking (pase por día) y la sección Salas de juntas con detalles y enlaces. Para dudas o acompañamiento, también por WhatsApp o correo electrónico.',
+      'En este sitio encontrarás la sección Oficinas (renta por día y contratos anuales), el pase de coworking por día y la sección Salas de juntas con detalles y enlaces. Para dudas o acompañamiento, también por WhatsApp o correo electrónico.',
     showPlanLinks: true,
   },
   {

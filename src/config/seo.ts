@@ -10,7 +10,7 @@ export const business = {
   name: 'Estudio Popnest',
   legalName: 'Estudio Popnest',
   description:
-    'Coworking, salas de juntas y clases de Pilates, yoga y bienestar en la colonia Del Carmen, Coyoacán (Ciudad de México): pase por día, café y terraza, cerca del Museo Frida Kahlo.',
+    'Renta de oficinas privadas en la colonia Del Carmen, Coyoacán (Ciudad de México): por día, medio día o con contrato anual. Además salas de juntas, pase de coworking por día y clases de Pilates y yoga, cerca del Museo Frida Kahlo.',
   streetAddress: 'Londres 105',
   addressLocality: 'Coyoacán',
   addressRegion: 'Ciudad de México',
@@ -42,9 +42,9 @@ export type RouteSeo = { title: string; description: string; noIndex?: boolean }
 /** Meta por ruta (pathname con react-router, sin dominio) */
 export const routeSeo: Record<string, RouteSeo> = {
   '/': {
-    title: 'Estudio Popnest | Coworking, Pilates y yoga en Del Carmen, Coyoacán',
+    title: 'Renta de oficinas en Coyoacán | Estudio Popnest | Pilates y yoga',
     description:
-      'Coworking, salas de juntas y clases de Pilates, yoga, Tai Chi y Sound Healing en la colonia Del Carmen, Coyoacán (CDMX), con café y terraza. A pasos del Museo Frida Kahlo, Londres 105.',
+      'Renta de oficinas privadas en Del Carmen, Coyoacán (CDMX): por día, medio día o contrato anual. Salas de juntas, pase de coworking y clases de Pilates y yoga. Londres 105, cerca del Museo Frida Kahlo.',
   },
   '/classes': {
     title: 'Pilates mat y yoga en Coyoacán | Clases en Del Carmen | Estudio Popnest',
@@ -57,7 +57,7 @@ export const routeSeo: Record<string, RouteSeo> = {
       'Horario semanal de Pilates, yoga, Tai Chi, Sound Healing, Belly Dance y Stretching en Estudio Popnest, Londres 105, Del Carmen, Coyoacán. Reserva tu lugar en línea.',
   },
   '/planes': {
-    title: 'Coworking en Coyoacán: pase por día $300 | Estudio Popnest',
+    title: 'Pase de coworking por día en Coyoacán $300 | Estudio Popnest',
     description:
       'Pase por día de coworking en Del Carmen, Coyoacán (CDMX): $300 MXN, con Wi‑Fi, café, té y agua, impresora y áreas comunes. A pasos del Museo Frida Kahlo.',
   },
@@ -67,9 +67,9 @@ export const routeSeo: Record<string, RouteSeo> = {
       'Salas de reuniones por hora en Coyoacán, colonia Del Carmen: distintas capacidades para equipos, espacios equipados y ubicación céntrica cerca del centro histórico del barrio.',
   },
   '/oficinas-largo-plazo': {
-    title: 'Renta de oficina privada por día, medio día y largo plazo en Coyoacán | Estudio Popnest',
+    title: 'Renta de oficinas en Coyoacán: por día y contrato anual | Estudio Popnest',
     description:
-      'Oficinas privadas en renta en Del Carmen, Coyoacán: por día ($1,200) o medio día ($600) con reserva en línea, y contratos anuales o de largo plazo con cotización por WhatsApp.',
+      'Renta de oficinas privadas en Del Carmen, Coyoacán (CDMX): contratos anuales o de largo plazo con cotización por WhatsApp, y oficina por día ($1,200) o medio día ($600) con reserva en línea.',
   },
   '/eventos': {
     title: 'Eventos, talleres y workshops en Coyoacán | Estudio Popnest',
@@ -97,19 +97,19 @@ export const routeSeo: Record<string, RouteSeo> = {
       'Teléfono, correo y dirección en Londres 105 (Del Carmen, Coyoacán, CDMX): mapa, cómo llegar, transporte público y orientación para estacionamiento. Horario y preguntas frecuentes.',
   },
   '/sobre-nosotros': {
-    title: 'Sobre Estudio Popnest | Coworking en Del Carmen, Coyoacán',
+    title: 'Sobre Estudio Popnest | Oficinas y bienestar en Del Carmen, Coyoacán',
     description:
       'Quiénes somos: comunidad de trabajo en la colonia Del Carmen, Coyoacán — un tercer lugar entre casa y oficina para profesionistas y equipos, con foco en diseño y creatividad.',
   },
   '/privacidad': {
     title: 'Aviso de privacidad | Estudio Popnest, Coyoacán',
     description:
-      'Aviso de privacidad de Estudio Popnest (espacio de coworking en Coyoacán, Ciudad de México): tratamiento de datos personales conforme a la legislación aplicable.',
+      'Aviso de privacidad de Estudio Popnest (oficinas en renta y estudio de bienestar en Coyoacán, Ciudad de México): tratamiento de datos personales conforme a la legislación aplicable.',
   },
   '/terminos': {
     title: 'Términos y condiciones | Estudio Popnest, Coyoacán',
     description:
-      'Condiciones de uso de los servicios de coworking y salas de reunión de Estudio Popnest en Del Carmen, Coyoacán (CDMX).',
+      'Condiciones de uso de los servicios de renta de oficinas, coworking y salas de reunión de Estudio Popnest en Del Carmen, Coyoacán (CDMX).',
   },
   '/404': {
     title: 'Página no encontrada | Estudio Popnest',

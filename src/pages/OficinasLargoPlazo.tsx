@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import { JsonLd } from '../components/seo/JsonLd'
+import { buildBreadcrumb } from '../lib/schema'
 import { site } from '../config/site'
 import { buildWhatsAppUrl } from '../lib/whatsapp'
 import { officeDayRentals } from '../data/officeDayRentals'
@@ -12,6 +14,33 @@ const officeImg = '/images/espacios/sala-dakota.webp'
 /** Anclas para los botones de navegación interna de la página. */
 const dayRatesId = 'oficina-por-dia'
 const monthlyPlansId = 'planes-mensuales'
+
+const FAQS = [
+  {
+    q: '¿Cómo funciona la renta de oficinas en Estudio Popnest?',
+    a: 'Rentamos oficinas privadas en la colonia Del Carmen, Coyoacán, principalmente con contrato anual (compromiso de 12 meses con tarifa mensual acordada) o acuerdos de largo plazo según disponibilidad. También puedes rentar la oficina privada por día o por medio día.',
+  },
+  {
+    q: '¿Cuánto cuesta rentar una oficina en Coyoacán?',
+    a: 'La oficina privada por día cuesta $1,200 MXN y por medio día $600 MXN. Los contratos anuales y de largo plazo se cotizan según el espacio y la duración: llena el formulario o escríbenos por WhatsApp y te enviamos una propuesta.',
+  },
+  {
+    q: '¿Dónde están las oficinas?',
+    a: 'En Londres 105, colonia Del Carmen, Coyoacán, Ciudad de México, a pasos del Museo Frida Kahlo.',
+  },
+  {
+    q: '¿Qué incluye la renta de la oficina?',
+    a: 'Uso del espacio asignado en el horario acordado, acceso a áreas comunes y cafetería, Wi‑Fi y servicios básicos del inmueble. La oficina privada por día incluye mesa para hasta 10 personas, pantalla y ventanal al patio.',
+  },
+  {
+    q: '¿Puedo rentar la oficina solo por un día?',
+    a: 'Sí. La oficina privada se renta por día completo (9:00 a 19:00 h) o por medio día (mañana 9:00 a 12:00 h o tarde 12:00 a 19:00 h), con reserva en línea y sin contrato.',
+  },
+  {
+    q: '¿Tienen coworking?',
+    a: 'Sí, ofrecemos un pase de coworking por día de $300 MXN para quien no necesita una oficina fija. Consulta la página de coworking para ver horarios y qué incluye.',
+  },
+] as const
 
 /** Antetítulo en versalitas: hilo visual entre secciones. */
 function Eyebrow({ children }: { children: React.ReactNode }) {
@@ -58,6 +87,23 @@ export function OficinasLargoPlazo() {
 
   return (
     <main className="bg-[#fbfaf9] pb-0">
+      <JsonLd
+        data={buildBreadcrumb([
+          { name: 'Inicio', path: '/' },
+          { name: 'Renta de oficinas', path: '/oficinas-largo-plazo' },
+        ])}
+      />
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: FAQS.map(({ q, a }) => ({
+            '@type': 'Question',
+            name: q,
+            acceptedAnswer: { '@type': 'Answer', text: a },
+          })),
+        }}
+      />
       <section className="relative flex min-h-[min(38vh,340px)] items-center justify-center overflow-hidden">
         <img
           src={heroImg}
@@ -75,10 +121,10 @@ export function OficinasLargoPlazo() {
             Estudio Popnest · Coyoacán
           </p>
           <h1 className="mt-3 font-heading text-[1.75rem] font-bold leading-[1.15] tracking-tight md:text-4xl">
-            Oficinas privadas
+            Renta de oficinas en Coyoacán
           </h1>
           <p className="mt-3 font-body text-sm leading-relaxed text-white/90 md:text-base">
-            Por un día, por medio día o por todo el año.
+            Oficinas privadas con contrato anual, o por un día o medio día.
           </p>
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
@@ -97,7 +143,7 @@ export function OficinasLargoPlazo() {
               to="/planes"
               className="inline-flex items-center justify-center rounded-full border border-white/60 px-7 py-3 font-body text-sm font-semibold tracking-wide text-white transition-colors hover:border-white hover:bg-white/10"
             >
-              Pase por día
+              Pase de coworking
             </Link>
           </div>
         </div>
@@ -130,7 +176,7 @@ export function OficinasLargoPlazo() {
                 Oficina por día y por medio día
               </h2>
               <p className="mt-5 font-body leading-relaxed text-body">
-                Sin contrato ni compromiso mensual: reserva la oficina privada el día que la
+                Sin contrato: reserva la oficina privada el día que la
                 necesites. Es un espacio cerrado con mesa para hasta 10 personas, pantalla y ventanal
                 al patio, ideal para concentrarte o tener juntas privadas.
               </p>
@@ -186,7 +232,7 @@ export function OficinasLargoPlazo() {
                   href={`#${monthlyPlansId}`}
                   className="font-semibold text-primary hover:underline"
                 >
-                  Ver planes mensuales →
+                  Ver contratos de oficina →
                 </a>
               </p>
             </div>
@@ -217,26 +263,26 @@ export function OficinasLargoPlazo() {
             <span className="font-heading font-semibold text-white">
               ¿Buscas una oficina fija?
             </span>{' '}
-            Tenemos planes mensuales y contratos anuales.
+            Rentamos oficinas con contrato anual o de largo plazo.
           </p>
           <a
             href={`#${monthlyPlansId}`}
             className="inline-flex shrink-0 items-center justify-center rounded-full bg-white px-7 py-3 font-body text-sm font-semibold tracking-wide text-[#1f2937] transition-colors hover:bg-quaternary"
           >
-            Planes mensuales
+            Contratos de oficina
           </a>
         </div>
       </section>
 
       {/* Largo plazo */}
       <section id={monthlyPlansId} className="mx-auto max-w-3xl scroll-mt-24 px-6 py-14 lg:px-12 lg:py-16">
-        <Eyebrow>Planes mensuales · Largo plazo</Eyebrow>
+        <Eyebrow>Renta de oficinas · Contrato anual</Eyebrow>
         <h2 className="mt-4 font-heading text-[1.75rem] font-bold leading-[1.2] tracking-tight text-[#1f2937] md:text-[2.125rem]">
-          Oficinas con contrato
+          Renta de oficinas con contrato anual
         </h2>
         <p className="mt-5 font-body text-lg leading-relaxed text-body">
-          Para quien necesita un mismo espacio durante meses o todo el año, con las comodidades de
-          Estudio Popnest en la colonia Del Carmen.
+          Renta tu oficina en Coyoacán por todo el año: un mismo espacio para ti o tu equipo, con las
+          comodidades de Estudio Popnest en la colonia Del Carmen, a pasos del Museo Frida Kahlo.
         </p>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
@@ -244,7 +290,7 @@ export function OficinasLargoPlazo() {
             <h3 className="font-heading text-base font-semibold text-[#1f2937]">Contrato anual</h3>
             <p className="mt-3 font-body text-sm leading-relaxed text-body">
               Tarifa mensual acordada con compromiso de 12 meses; ideal para presupuestos previsibles
-              y equipos en crecimiento.
+              y equipos en crecimiento. Es nuestra forma principal de renta de oficinas.
             </p>
           </div>
           <div className="rounded-2xl border border-neutral/70 bg-white p-6 shadow-sm">
@@ -330,10 +376,25 @@ export function OficinasLargoPlazo() {
         <p className="mt-8 font-body text-sm text-[#6b7280]">
           También puedes revisar{' '}
           <Link to="/planes" className="font-semibold text-primary hover:underline">
-            pase por día de coworking
+            pase de coworking por día
           </Link>{' '}
           si buscas acceso flexible sin oficina fija.
         </p>
+        <section className="mt-16" aria-labelledby="oficinas-faq">
+          <h2 id="oficinas-faq" className="font-heading text-2xl font-bold text-[#1f2937]">
+            Preguntas frecuentes sobre la renta de oficinas
+          </h2>
+          <div className="mt-6 divide-y divide-neutral/70 rounded-xl border border-neutral/70 bg-white">
+            {FAQS.map(({ q, a }) => (
+              <details key={q} className="group px-5 py-4">
+                <summary className="cursor-pointer font-heading text-base font-semibold text-[#1f2937]">
+                  {q}
+                </summary>
+                <p className="mt-2 font-body text-body">{a}</p>
+              </details>
+            ))}
+          </div>
+        </section>
       </section>
     </main>
   )
