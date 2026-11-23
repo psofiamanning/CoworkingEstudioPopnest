@@ -22,6 +22,7 @@ export const business = {
   /**
    * Coworking: lun–vie 9:00–19:00, sáb–dom 9:00–17:00.
    * Aquí va la unión con clases y Run Club (primera actividad → fin de la última clase).
+   * Debe ser IDÉNTICO al footer (SiteFooter.tsx) y al perfil de Google Business.
    */
   hours: [
     { days: ['Monday'], opens: '08:30', closes: '20:30' },
