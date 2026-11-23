@@ -48,6 +48,7 @@ export function JsonLdLocalBusiness() {
           email: business.email,
           hasMap: site.googleMapsUrl,
           priceRange: '$$',
+          petsAllowed: true,
           areaServed: {
             '@type': 'City',
             name: 'Ciudad de México',

@@ -24,6 +24,11 @@ export const contactFaq: readonly FaqItem[] = [
     showPlanLinks: true,
   },
   {
+    question: '¿Estudio Popnest es pet friendly?',
+    answer:
+      'Sí. Es un espacio pet friendly: puedes venir con tu perro a las áreas de oficinas y coworking.',
+  },
+  {
     question: '¿Hay estacionamiento?',
     answer:
       'La zona es muy peatonal. Si vienes en auto, en Coyoacán hay alternativas de estacionamiento; escríbenos por WhatsApp y te orientamos según el día y la hora de tu visita.',
